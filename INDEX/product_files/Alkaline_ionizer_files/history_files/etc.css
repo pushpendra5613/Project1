@@ -1,0 +1,2602 @@
+@charset "UTF-8";
+/* ==========================================================================
+*
+*  COMMON
+*
+*  ========================================================================*/
+.l-container {
+  padding-bottom: 90px;
+}
+
+@media only screen and (max-width: 767px) {
+  .l-container {
+    padding-bottom: 45px;
+  }
+}
+
+.p-section {
+  position: relative;
+}
+
+.p-img {
+  max-width: 100%;
+}
+
+.p-hl--v1 {
+  font-size: 24px;
+  color: #004ea2;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  border-bottom: 1px solid #999;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-hl--v1 {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+}
+
+.p-hl--v2 {
+  font-size: 24px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  border-left: 5px solid #004ea2;
+  padding: 0 0 0 15px;
+  vertical-align: middle;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-hl--v2 {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+}
+
+.p-hl--v2_tohoku {
+  border-left: 5px solid #ad6ada;
+  margin-bottom: 30px;
+}
+
+.p-hl--v2_kanto {
+  border-left: 5px solid #2c84e3;
+  margin-bottom: 30px;
+}
+
+.p-hl--v2_hokuriku {
+  border-left: 5px solid #a69014;
+  margin-bottom: 30px;
+}
+
+.p-hl--v2_kinki {
+  border-left: 5px solid #ed4995;
+  margin-bottom: 30px;
+}
+
+.p-hl--v2_shikoku {
+  border-left: 5px solid #589305;
+  margin-bottom: 30px;
+}
+
+.p-hl--v2_kyushu {
+  border-left: 5px solid #f37607;
+  margin-bottom: 30px;
+}
+
+.p-hl--v3 {
+  font-size: 20px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-hl--v3 {
+    font-size: 14px;
+  }
+}
+
+.p-hl--v4 {
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-hl--v4 {
+    font-size: 12px;
+  }
+}
+
+.p-rt--v1 {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-rt--v1 {
+    font-size: 12px;
+  }
+}
+
+.p-rt--v1 a {
+  color: #004ea2;
+  text-decoration: underline;
+}
+
+.p-rt--v1 a:hover {
+  text-decoration: none;
+}
+
+.p-fig {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.p-note {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-note {
+    font-size: 12px;
+  }
+}
+
+.p-figcaption {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  padding: 6px;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-figcaption {
+    font-size: 12px;
+  }
+}
+
+.p-table--v1 {
+  width: 100%;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-table--v1 {
+    overflow-x: auto;
+  }
+}
+
+.p-table--v1 table {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-table--v1 table {
+    width: 856px;
+  }
+}
+
+.p-table--v1 table thead tr th {
+  background-color: #eff5fb;
+  border: 1px solid #d0dde9;
+  padding: 15px 30px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-table--v1 table thead tr th {
+    font-size: 10px;
+    padding: 5px;
+  }
+}
+
+.p-table--v1 table tbody tr td {
+  vertical-align: middle;
+  border: 1px solid #d0dde9;
+  padding: 20px 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-table--v1 table tbody tr td {
+    font-size: 10px;
+    padding: 5px;
+  }
+}
+
+#closed table tbody tr th {
+  padding: 5px;
+  text-align:center;
+  vertical-align:middle;
+
+}
+#closed table tbody tr td {
+  padding: 10px 20px;
+  vertical-align:middle;
+}
+@media only screen and (max-width: 767px) {
+  #closed table tbody tr td {
+    padding: 10px ;
+  }
+}
+
+#closed .p-table__dlList {
+  font-size: 0;
+  /*margin-left: -10px;*/
+  /*width: 485px;*/
+}
+
+@media only screen and (max-width: 767px) {
+#closed .p-table__dlList {
+    width: 148px;
+  }
+}
+
+#closed .p-table__dlList li {
+  display: inline-block;
+  /*margin-left: 10px;*/
+  margin: 5px 0;
+}
+
+#closed .p-table__dlList li a {
+  display: block;
+  width: 148px;
+  background-color: #999999;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+@media only screen and (max-width: 767px) {
+#closed .p-table__dlList li a {
+    font-size: 10px;
+  }
+}
+
+.p-btn--v1 a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-image: url(/files/assets/img/common/frame/arrow_white.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-color: #999 !important;
+}
+
+.p-btn--v1 a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-btn--v1 a {
+    font-size: 12px;
+    background-position: right 10px center;
+  }
+}
+
+.p-btn--v2 a {
+  border: 1px solid #d0dae5;
+  display: block;
+  padding: 15px 20px;
+  color: #004ea2;
+  font-size: 14px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-image: url(/files/assets/img/etc/common/arrow_b_down.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 14px auto;
+  background-color: #fff;
+}
+.p-btn--v2 A.attention_a {
+	margin: 20px auto;
+	font-size: 16px;
+	text-align: center;
+	font-family: "FOT-セザンヌ Pro B";
+}
+
+@media only screen and (max-width: 767px) {
+  .p-btn--v2 a {
+    font-size: 12px;
+    background-position: right 10px center;
+  }
+}
+
+.p-btn--v3 a {
+  border-radius: 20px;
+  display: block;
+  padding: 12px;
+  font-size: 18px;
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 8px auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-btn--v3 a {
+    font-size: 12px;
+    border-radius: 14px;
+    background-size: 6px auto;
+    background-position: right 10px center;
+  }
+}
+
+.p-btn--v3_tohoku a {
+  color: #ad6ada;
+  background-color: #f0dcfd;
+  background-image: url(/files/assets/img/etc/common/arrow_purple_right.png);
+}
+
+.p-btn--v3_kanto a {
+  color: #2c84e3;
+  background-color: #c4ebfc;
+  background-image: url(/files/assets/img/etc/common/arrow_blue_right.png);
+}
+
+.p-btn--v3_hokuriku a {
+  color: #a69014;
+  background-color: #f4ebb9;
+  background-image: url(/files/assets/img/etc/common/arrow_pink_right.png);
+}
+
+.p-btn--v3_kinki a {
+  color: #ed4995;
+  background-color: #f5dbe7;
+  background-image: url(/files/assets/img/etc/common/arrow_yellow_right.png);
+}
+
+.p-btn--v3_shikoku a {
+  color: #589305;
+  background-color: #c4eb8d;
+  background-image: url(/files/assets/img/etc/common/arrow_green_right.png);
+}
+
+.p-btn--v3_kyushu a {
+  color: #f37607;
+  background-color: #f8e2c2;
+  background-image: url(/files/assets/img/etc/common/arrow_orange_right.png);
+}
+
+.p-inner {
+  position: relative;
+}
+
+.p-inner--contents {
+  width: 1192px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-inner--contents {
+    width: 93.75%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .p-grid {
+    margin-bottom: -15px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .p-grid .p-grid__col {
+    margin-bottom: 15px;
+  }
+}
+
+.p-grid .p-grid__col--l {
+  float: left;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-grid .p-grid__col--l {
+    float: none;
+  }
+}
+
+.p-grid .p-grid__col--r {
+  float: right;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-grid .p-grid__col--r {
+    float: none;
+  }
+}
+
+.p-grid--colNum2 .p-grid__col {
+  width: 584px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-grid--colNum2 .p-grid__col {
+    width: 100%;
+  }
+}
+
+.p-itemList {
+  margin-top: -20px;
+  padding-top: 20px;
+
+
+
+}
+
+@media only screen and (max-width: 767px) {
+  .p-itemList {
+    margin-top: -10px;
+    padding-top: 10px;
+  }
+}
+
+.p-itemList .p-itemList__item {
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+.p-itemList .p-itemList__item a{
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-itemList .p-itemList__item {
+    margin-top: 10px;
+  }
+}
+
+.p-itemList--colNum2 {
+  margin-left: -20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-itemList--colNum2 {
+    margin-left: 0;
+  }
+}
+
+.p-itemList--colNum2 .p-itemList__item {
+  width: 586px;
+  float: left;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-itemList--colNum2 .p-itemList__item {
+    width: 100%;
+    margin-left: 0;
+    float: none;
+  }
+}
+
+.p-itemList--colNum3 {
+  margin-left: -20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-itemList--colNum3 {
+    margin-left: 0;
+  }
+}
+
+.p-itemList--colNum3 .p-itemList__item {
+  width: 384px;
+  float: left;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-itemList--colNum3 .p-itemList__item {
+    width: 100%;
+    margin-left: 0;
+    float: none;
+  }
+}
+
+.p-itemList--colNum4 {
+  margin-left: -20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-itemList--colNum4 {
+    margin-left: -2%;
+  }
+}
+
+.p-itemList--colNum4 .p-itemList__item {
+  width: 283px;
+  float: left;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-itemList--colNum4 .p-itemList__item {
+    width: 48%;
+    margin-left: 2%;
+  }
+}
+
+.js-toggleContents .js-toggleContents__trigger {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url(/files/assets/img/etc/common/icon_toggle_opened.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  overflow: visible;
+}
+
+@media only screen and (max-width: 767px) {
+  .js-toggleContents .js-toggleContents__trigger {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.js-toggleContents .js-toggleContents__trigger div {
+  position: relative;
+}
+
+.js-toggleContents .js-toggleContents__trigger div span {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+  .js-toggleContents .js-toggleContents__trigger div span {
+    top: 4px;
+    right: 35px;
+  }
+}
+
+.js-toggleContents .js-toggleContents__trigger.is-clicked {
+  background-image: url(/files/assets/img/etc/common/icon_toggle_closed.jpg);
+}
+
+/* ==========================================================================
+*
+*
+*  /support/**.html
+*
+*
+*  ========================================================================*/
+.support .p-faqs .p-faqs__inner {
+  width: 1192px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .support .p-faqs .p-faqs__inner {
+    width: 100%;
+  }
+}
+
+.support .p-faqs .p-faqs__holder {
+  padding: 25px 100px;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .support .p-faqs .p-faqs__holder {
+    padding: 10px 0;
+  }
+}
+
+.support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item {
+  border-top: 1px solid #d0dde9;
+  padding: 25px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item {
+    padding: 20px 10px;
+  }
+}
+
+.support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item:first-child {
+  border-top: none;
+}
+
+.support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dt {
+  position: relative;
+  font-size: 20px;
+  padding-left: 60px;
+}
+
+@media only screen and (max-width: 767px) {
+  .support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dt {
+    padding-left: 40px;
+    font-size: 12px;
+  }
+}
+
+.support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dt:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  display: inline-block;
+  background-image: url(/files/assets/img/etc/common/icon_question.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  .support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dt:before {
+    width: 30px;
+    height: 30px;
+    top: -5px;
+  }
+}
+
+.support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dt a {
+  display: block;
+}
+
+.support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dd {
+  position: relative;
+  font-size: 16px;
+  padding-left: 60px;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dd {
+    padding-left: 40px;
+    font-size: 12px;
+    margin-top: 25px;
+  }
+}
+
+.support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dd:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  display: inline-block;
+  background-image: url(/files/assets/img/etc/common/icon_answer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  .support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dd:before {
+    width: 30px;
+    height: 30px;
+    top: -5px;
+  }
+}
+
+.support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dd .p-faqs__holder__faqList__item__links {
+  margin-top: 15px;
+  line-height: 2;
+}
+
+.support .p-faqs .p-faqs__holder .p-faqs__holder__faqList .p-faqs__holder__faqList__item dl dd .p-faqs__holder__faqList__item__links a {
+  color: #004ea2;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+*  /support/index.html
+*  ========================================================================*/
+#index.support .guidance .guidance__itemList .guidance__itemList__item {
+  background-color: #fff;
+}
+
+#index.support .guidance .guidance__itemList .guidance__itemList__item .guidance__itemList__item__texts {
+  padding: 20px 15px;
+}
+
+#index.support .guidance .guidance__itemList .guidance__itemList__item .guidance__itemList__item__texts .guidance__itemList__item__texts__title {
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.support .guidance .guidance__itemList .guidance__itemList__item .guidance__itemList__item__texts .guidance__itemList__item__texts__title {
+    font-size: 12px;
+  }
+}
+
+#index.support .guidance .guidance__itemList .guidance__itemList__item .guidance__itemList__item__texts .guidance__itemList__item__texts__title:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  background-color: #202020;
+  width: 20px;
+  height: 1px;
+}
+
+#index.support .guidance .guidance__itemList .guidance__itemList__item .guidance__itemList__item__texts .guidance__itemList__item__texts__description {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.support .guidance .guidance__itemList .guidance__itemList__item .guidance__itemList__item__texts .guidance__itemList__item__texts__description {
+    font-size: 10px;
+  }
+}
+
+#index.support .guidance .guidance__itemList .guidance__itemList__item .guidance__itemList__item__detail {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-image: url(/files/assets/img/common/frame/arrow_white.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-color: #999;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.support .guidance .guidance__itemList .guidance__itemList__item .guidance__itemList__item__detail {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+}
+
+/* ==========================================================================
+*  /support/manual.html
+*  ========================================================================*/
+#manual.support .catalogRequest {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  #manual.support .catalogRequest {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+#manual.support .catalogRequest .catalogRequest__lead {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  #manual.support .catalogRequest .catalogRequest__lead {
+    font-size: 12px;
+  }
+}
+
+#manual.support .catalogRequest .catalogRequest__btn {
+  width: 384px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  #manual.support .catalogRequest .catalogRequest__btn {
+    width: 100%;
+  }
+}
+
+#manual.support .category .category__hl {
+  margin-bottom: 0;
+}
+
+#manual.support .category .category__itemList {
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+@media only screen and (max-width: 767px) {
+  #manual.support .category .category__itemList {
+    margin-top: 20px;
+    margin-bottom: -8px;
+  }
+}
+
+#manual.support .category .category__itemList .category__itemList__item {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  #manual.support .category .category__itemList .category__itemList__item {
+    margin-bottom: 20px;
+  }
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__holder {
+  margin-bottom: 170px;
+}
+
+@media only screen and (max-width: 767px) {
+  #manual.support .category .category__itemList .category__itemList__item .category__itemList__item__holder {
+    margin-bottom: 120px;
+  }
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__holder .category__itemList__item__holder__texts {
+  padding: 10px 20px 0;
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__holder .category__itemList__item__holder__texts .category__itemList__item__holder__texts__name {
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  #manual.support .category .category__itemList .category__itemList__item .category__itemList__item__holder .category__itemList__item__holder__texts .category__itemList__item__holder__texts__name {
+    font-size: 12px;
+  }
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__holder .category__itemList__item__holder__texts .category__itemList__item__holder__texts__date {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  #manual.support .category .category__itemList .category__itemList__item .category__itemList__item__holder .category__itemList__item__holder__texts .category__itemList__item__holder__texts__date {
+    font-size: 10px;
+  }
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__btns {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__btns .category__itemList__item__btns__btnList .category__itemList__item__btns__btnList__item {
+  border-top: 1px solid #fff;
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__btns .category__itemList__item__btns__btnList .category__itemList__item__btns__btnList__item:first-child {
+  border-top: none;
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__btns .category__itemList__item__btns__btnList .category__itemList__item__btns__btnList__item a {
+  display: block;
+  padding: 15px 5px 15px 65px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 25px 25px;
+  background-color: #999;
+}
+
+@media only screen and (max-width: 767px) {
+  #manual.support .category .category__itemList .category__itemList__item .category__itemList__item__btns .category__itemList__item__btns__btnList .category__itemList__item__btns__btnList__item a {
+    font-size: 12px;
+    background-position: 10px center;
+    background-size: 15px 15px;
+    padding: 10px 15px 10px 32px;
+  }
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__btns .category__itemList__item__btns__btnList .category__itemList__item__btns__btnList__item--catalog a {
+  background-image: url(/files/assets/img/etc/common/icon_catalog.png);
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__btns .category__itemList__item__btns__btnList .category__itemList__item__btns__btnList__item--manual a {
+  background-image: url(/files/assets/img/etc/common/icon_manual.png);
+}
+
+#manual.support .category .category__itemList .category__itemList__item .category__itemList__item__btns .category__itemList__item__btns__btnList .category__itemList__item__btns__btnList__item--guide a {
+  background-image: url(/files/assets/img/etc/common/icon_guide.png);
+}
+
+/* ==========================================================================
+*  /support/manual.html
+*  ========================================================================*/
+#closed.support .category .category__hl {
+  margin-bottom: 0;
+}
+
+#closed.support .category .category__rt {
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  #closed.support .category .category__rt {
+    margin-top: 20px;
+  }
+}
+
+/* ==========================================================================
+*  /support/faq/index.html
+*  ========================================================================*/
+#index.support-faq .eachFaq .eachFaq__itemList .eachFaq__itemList__item {
+  position: relative;
+  background-color: #fff;
+}
+
+#index.support-faq .eachFaq .eachFaq__itemList .eachFaq__itemList__item a .eachFaq__itemList__item__texts {
+  padding: 10px 20px 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.support-faq .eachFaq .eachFaq__itemList .eachFaq__itemList__item a .eachFaq__itemList__item__texts {
+    padding: 10px 20px;
+  }
+}
+
+#index.support-faq .eachFaq .eachFaq__itemList .eachFaq__itemList__item a .eachFaq__itemList__item__texts .eachFaq__itemList__item__texts__about {
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.support-faq .eachFaq .eachFaq__itemList .eachFaq__itemList__item a .eachFaq__itemList__item__texts .eachFaq__itemList__item__texts__about {
+    font-size: 12px;
+  }
+}
+
+#index.support-faq .eachFaq .eachFaq__itemList .eachFaq__itemList__item a .eachFaq__itemList__item__texts .eachFaq__itemList__item__texts__description {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.support-faq .eachFaq .eachFaq__itemList .eachFaq__itemList__item a .eachFaq__itemList__item__texts .eachFaq__itemList__item__texts__description {
+    font-size: 10px;
+  }
+}
+
+#index.support-faq .eachFaq .eachFaq__itemList .eachFaq__itemList__item a .eachFaq__itemList__item__btn {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-image: url(/files/assets/img/common/frame/arrow_white.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-color: #999;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.support-faq .eachFaq .eachFaq__itemList .eachFaq__itemList__item a .eachFaq__itemList__item__btn {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+}
+
+/* ==========================================================================
+*
+*
+*  /uservoice/**.html
+*
+*
+*  ========================================================================*/
+.uservoice .p-review .p-review__holder {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.uservoice .p-review .p-review__holder .p-review__holder__fig {
+  float: right;
+  width: 240px;
+  text-align: center;
+  margin-right: 140px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__holder .p-review__holder__fig {
+    float: none;
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
+.uservoice .p-review .p-review__holder .p-review__holder__texts {
+  float: left;
+  width: 586px;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__holder .p-review__holder__texts {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.uservoice .p-review .p-review__holder .p-review__holder__texts .p-review__holder__texts__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+.uservoice .p-review .p-review__holder .p-review__holder__texts .p-review__holder__texts__logo img {
+  width: 300px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__holder .p-review__holder__texts .p-review__holder__texts__logo {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__holder .p-review__holder__texts .p-review__holder__texts__logo img {
+    width: 198px;
+  }
+}
+
+.uservoice .p-review .p-review__holder .p-review__holder__texts .p-review__holder__texts__name {
+  font-size: 22px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__holder .p-review__holder__texts .p-review__holder__texts__name {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.uservoice .p-review .p-review__holder .p-review__holder__texts .p-review__holder__texts__description {
+  font-size: 14px;
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__inner {
+  width: 1192px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__inner {
+    width: 100%;
+  }
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__holder {
+  background-color: #fff;
+  padding: 0 100px 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__holder {
+    padding: 0 3.125% 40px;
+  }
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list {
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list {
+    margin-bottom: 50px;
+  }
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item {
+  padding: 35px 0;
+  border-bottom: 1px solid #d0dde9;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item {
+    padding: 20px 0;
+  }
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item .p-review__voices__holder__list__item__thumbnail {
+  width: 80px;
+  float: left;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item .p-review__voices__holder__list__item__thumbnail {
+    width: 100%;
+    float: none;
+    width: 95px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item .p-review__voices__holder__list__item__texts {
+  width: 808px;
+  float: left;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item .p-review__voices__holder__list__item__texts {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item .p-review__voices__holder__list__item__texts .p-review__voices__holder__list__item__texts__abstract {
+  font-size: 24px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item .p-review__voices__holder__list__item__texts .p-review__voices__holder__list__item__texts__abstract {
+    font-size: 17px;
+  }
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item .p-review__voices__holder__list__item__texts .p-review__voices__holder__list__item__texts__rt {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__list .p-review__voices__holder__list__item .p-review__voices__holder__list__item__texts .p-review__voices__holder__list__item__texts__rt {
+    font-size: 14px;
+  }
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__btn {
+  text-align: center;
+  width: 384px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__btn {
+    width: 100%;
+  }
+}
+
+.uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__btn a {
+  font-size: 18px;
+  background-image: url(/files/assets/img/etc/common/arrow_w_left.png);
+  background-position: left 20px center;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-review .p-review__voices .p-review__voices__holder .p-review__voices__holder__btn a {
+    font-size: 12px;
+  }
+}
+
+.uservoice .p-waitingForVoice {
+  position: relative;
+}
+
+.uservoice .p-waitingForVoice .p-waitingForVoice__hl {
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-color: #004ea2;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-waitingForVoice .p-waitingForVoice__hl {
+    font-size: 16px;
+  }
+}
+
+.uservoice .p-waitingForVoice .p-waitingForVoice__holder {
+  position: relative;
+  padding: 40px 25px 50px;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-waitingForVoice .p-waitingForVoice__holder {
+    padding: 15px;
+  }
+}
+
+.uservoice .p-waitingForVoice .p-waitingForVoice__holder .p-waitingForVoice__holder__fig {
+  width: 330px;
+  position: absolute;
+  top: 40px;
+  right: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-waitingForVoice .p-waitingForVoice__holder .p-waitingForVoice__holder__fig {
+    width: 100%;
+    position: static;
+    margin-bottom: 15px;
+  }
+}
+
+.uservoice .p-waitingForVoice .p-waitingForVoice__holder .p-waitingForVoice__holder__rt {
+  width: 735px;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-waitingForVoice .p-waitingForVoice__holder .p-waitingForVoice__holder__rt {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+}
+
+.uservoice .p-waitingForVoice .p-waitingForVoice__holder .p-waitingForVoice__holder__btn {
+  width: 385px;
+  margin-left: 165px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-waitingForVoice .p-waitingForVoice__holder .p-waitingForVoice__holder__btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.uservoice .p-waitingForVoice .p-waitingForVoice__holder .p-waitingForVoice__holder__btn a {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  .uservoice .p-waitingForVoice .p-waitingForVoice__holder .p-waitingForVoice__holder__btn a {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================================================
+*  /uservoice/index.html
+*  ========================================================================*/
+#index.uservoice .eachVoice .eachVoice__itemList .eachVoice__itemList__item {
+  position: relative;
+  background-color: #fff;
+}
+
+#index.uservoice .eachVoice .eachVoice__itemList .eachVoice__itemList__item a .eachVoice__itemList__item__category {
+  padding: 10px 20px 30px;
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.uservoice .eachVoice .eachVoice__itemList .eachVoice__itemList__item a .eachVoice__itemList__item__category {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+#index.uservoice .eachVoice .eachVoice__itemList .eachVoice__itemList__item a .eachVoice__itemList__item__btn {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-image: url(/files/assets/img/common/frame/arrow_white.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-color: #999;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.uservoice .eachVoice .eachVoice__itemList .eachVoice__itemList__item a .eachVoice__itemList__item__btn {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+}
+
+/* ==========================================================================
+*  /uservoice/smallmassager/index.html
+*  ========================================================================*/
+#index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 767px) {
+  #index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item {
+    margin-bottom: 20px;
+  }
+}
+
+#index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item a .eachItem__itemList__item__texts {
+  padding: 10px 20px 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item a .eachItem__itemList__item__texts {
+    padding: 10px 20px;
+  }
+}
+
+#index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item a .eachItem__itemList__item__texts .eachItem__itemList__item__texts__name {
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item a .eachItem__itemList__item__texts .eachItem__itemList__item__texts__name {
+    font-size: 12px;
+  }
+}
+
+#index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item a .eachItem__itemList__item__texts .eachItem__itemList__item__texts__date {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  #index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item a .eachItem__itemList__item__texts .eachItem__itemList__item__texts__date {
+    font-size: 10px;
+  }
+}
+
+#index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item a .eachItem__itemList__item__btn {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-image: url(/files/assets/img/common/frame/arrow_white.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-color: #999;
+  text-align: center;
+}
+#index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item a:hover .eachItem__itemList__item__btn {
+  text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 767px) {
+  #index.uservoice-smallmassager .eachItem .eachItem__itemList .eachItem__itemList__item a .eachItem__itemList__item__btn {
+    font-size: 12px;
+    padding: 10px 15px;
+  background-position: right 10px center;
+  }
+}
+
+/* ==========================================================================
+*
+*
+*  /product/**.html
+*
+*
+*  ========================================================================*/
+.product .p-mapSelect .p-mapSelect__holder {
+  padding-top: 40px;
+  padding-bottom: 130px;
+  background-image: url(/files/assets/img/etc/common/pattern_note.jpg);
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    background-size: 21px auto;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__inner {
+  width: 1192px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__inner {
+    width: 100%;
+    padding-left: 3.125%;
+    padding-right: 3.125%;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map {
+  position: relative;
+  float: left;
+  width: 584px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map {
+    width: 268px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    height: 250px;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap {
+  position: absolute;
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--tohoku {
+  right: 0;
+  top: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--tohoku {
+    width: 77px;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--kanto {
+  right: 99px;
+  top: 206px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--kanto {
+    width: 50px;
+    top: 105px;
+    right: 50px;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--hokuriku {
+  right: 192px;
+  top: 226px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--hokuriku {
+    width: 34px;
+    top: 115px;
+    right: 98px;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--kinki {
+  right: 235px;
+  top: 271px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--kinki {
+    width: 41px;
+    top: 138px;
+    right: 120px;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--shikoku {
+  right: 301px;
+  top: 271px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--shikoku {
+    width: 46px;
+    top: 138px;
+    right: 154px;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--kyushu {
+  right: 400px;
+  top: 282px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__map .p-mapSelect__holder__map__eachMap--kyushu {
+    width: 63px;
+    top: 142px;
+    right: 203px;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns {
+  width: 584px;
+  float: right;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns {
+    width: 100%;
+    float: none;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__rt {
+  position: relative;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-top: 80px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__rt {
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-size: 12px;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__rt span {
+  display: inline-block;
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__rt span:before, .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__rt span:after {
+  content: "";
+  width: 140px;
+  height: 1px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  background-color: #999999;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__rt span:before, .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__rt span:after {
+    width: 48px;
+  }
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__rt span:before {
+  left: 0;
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__rt span:after {
+  right: 0;
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__list {
+  margin-left: -20px;
+  margin-bottom: -30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__list {
+    margin-left: -4%;
+    margin-bottom: -15px;
+  }
+
+
+}
+
+.product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__list .p-mapSelect__holder__btn__list__item {
+  float: left;
+  width: 282px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-mapSelect .p-mapSelect__holder .p-mapSelect__holder__btns .p-mapSelect__holder__btn__list .p-mapSelect__holder__btn__list__item {
+    width: 48%;
+    margin-left: 2%;
+    margin-bottom: 15px;
+  }
+}
+
+.product .p-prefectures .p-prefectures__sec {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.product .p-prefectures .p-itemList {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .product .p-prefectures .p-prefectures__sec {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List {
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List {
+    margin-bottom: 30px;
+  }
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item {
+  background-color: #fff;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__texts {
+  padding: 20px 15px;
+  background-color: #fff;
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__texts .p-prefectures__sec__List__item__texts__title {
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__texts .p-prefectures__sec__List__item__texts__title {
+    font-size: 12px;
+  }
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__texts .p-prefectures__sec__List__item__texts__title:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  background-color: #202020;
+  width: 20px;
+  height: 1px;
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__texts .p-prefectures__sec__List__item__texts__description {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__texts .p-prefectures__sec__List__item__texts__description {
+    font-size: 10px;
+  }
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__btn {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-image: url(/files/assets/img/common/frame/arrow_white.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-color: #999;
+  text-align: center;
+}
+.p-itemList .p-itemList__item a:hover .p-prefectures__sec__List__item__btn{
+  text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__btn {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__btn--tohoku {
+  background-color: #ad6ada;
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__btn--kanto {
+  background-color: #2c84e3;
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__btn--hokuriku {
+  background-color: #a69014;
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__btn--kinki {
+  background-color: #ed4995;
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__btn--shikoku {
+  background-color: #589305;
+}
+
+.product .p-prefectures .p-prefectures__sec .p-prefectures__sec__List .p-prefectures__sec__List__item .p-prefectures__sec__List__item__btn--kyushu {
+  background-color: #f37607;
+}
+
+.product .p-facility .p-facility__holder {
+  margin-top: 30px;
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 518px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__holder {
+    min-height: inherit;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.product .p-facility .p-facility__holder .p-facility__holder__inner {
+  position: relative;
+
+  width: 1192px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__holder .p-facility__holder__inner {
+    width: 100%;
+    padding-left: 3.125%;
+    padding-right: 3.125%;
+  }
+}
+
+.product .p-facility .p-facility__holder .p-facility__holder__hl {
+  width: 586px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__holder .p-facility__holder__hl {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+.product .p-facility .p-facility__holder .p-facility__holder__hl--tohoku {
+  color: #ad6ada;
+}
+
+.product .p-facility .p-facility__holder .p-facility__holder__hl--kanto {
+  color: #2c84e3;
+}
+
+.product .p-facility .p-facility__holder .p-facility__holder__hl--hokuriku {
+  color: #a69014;
+}
+
+.product .p-facility .p-facility__holder .p-facility__holder__hl--kinki {
+  color: #ed4995;
+}
+
+.product .p-facility .p-facility__holder .p-facility__holder__hl--shikoku {
+  color: #589305;
+}
+
+.product .p-facility .p-facility__holder .p-facility__holder__hl--kyushu {
+  color: #f37607;
+}
+
+.product .p-facility .p-facility__holder .p-facility__holder__fig {
+  position: absolute;
+  top: 0;
+  left: 630px;
+  width: 562px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__holder .p-facility__holder__fig {
+    position: static;
+    margin-bottom: 10px;
+	  width: 100%;
+  }
+}
+.product .p-facility .p-facility__holder .p-facility__holder__fig img {
+	max-width: 562px;
+	max-height: 418px;
+}
+@media only screen and (max-width: 767px) {
+	.product .p-facility .p-facility__holder .p-facility__holder__fig img {
+		max-width: 100%;
+		max-height: inherit;
+	}
+}
+
+
+.product .p-facility .p-facility__holder p {
+  width: 586px;
+  font-size: 16px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__holder p {
+    width: 100%;
+    font-size: 12px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.product .p-facility .p-facility__holder table {
+  width: 586px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__holder table {
+    width: 100%;
+  }
+}
+
+.product .p-facility .p-facility__holder table tr th, .product .p-facility .p-facility__holder table tr td {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__holder table tr th, .product .p-facility .p-facility__holder table tr td {
+    font-size: 12px;
+
+  }
+}
+
+.product .p-facility .p-facility__holder table tr th {
+  width: 65px;
+}
+
+.product .p-facility .p-facility__media {
+  padding-top: 70px;
+  padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__media {
+    padding-top: 35px;
+  }
+}
+
+.product .p-facility .p-facility__media .p-facility__media__itemList .p-facility__media__itemList__item .p-facility__media__itemList__item__fig {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__media .p-facility__media__itemList .p-facility__media__itemList__item .p-facility__media__itemList__item__fig {
+    margin-bottom: 10px;
+  }
+}
+
+.product .p-facility .p-facility__media .p-facility__media__itemList .p-facility__media__itemList__item .p-facility__media__itemList__item__description {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__media .p-facility__media__itemList .p-facility__media__itemList__item .p-facility__media__itemList__item__description {
+    font-size: 12px;
+  }
+}
+
+.product .p-facility .p-facility__map {
+  padding-top: 25px;
+}
+
+.product .p-facility .p-facility__map .p-facility__map__googleMap {
+  width: 100%;
+  height: 600px;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__map .p-facility__map__googleMap {
+    height: 300px;
+  }
+}
+
+.product .p-facility .p-facility__map .p-facility__map__link {
+  font-size: 14px;
+  background-image: url(/files/assets/img/etc/common/icon_pin.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  padding-left: 25px;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__map .p-facility__map__link {
+    margin-top: 15px;
+  }
+}
+
+.product .p-facility .p-facility__map .p-facility__map__link a {
+  color: #004ea2;
+  text-decoration: underline;
+}
+
+.product .p-facility .p-facility__map .p-facility__map__link a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__map .p-facility__map__link {
+    font-size: 12px;
+  }
+}
+
+.product .p-facility .p-facility__map .p-facility__map__btn {
+  text-align: center;
+  width: 384px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__map .p-facility__map__btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.product .p-facility .p-facility__map .p-facility__map__btn a {
+  font-size: 18px;
+  background-image: url(/files/assets/img/etc/common/arrow_w_left.png);
+  background-position: left 20px center;
+}
+
+@media only screen and (max-width: 767px) {
+  .product .p-facility .p-facility__map .p-facility__map__btn a {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================================================
+*
+*
+*  /company/**.html
+*
+*
+*  ========================================================================*/
+.company .p-forCorporation .p-forCorporation__hl {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  background-color: #004ea2;
+  padding: 15px 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .company .p-forCorporation .p-forCorporation__hl {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
+
+.company .p-forCorporation .p-forCorporation__holder {
+  background-color: #fff;
+  padding: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .company .p-forCorporation .p-forCorporation__holder {
+    padding: 20px;
+  }
+}
+
+.company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__btn {
+  margin-bottom: 40px;
+  text-align: center;
+  width: 384px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+}
+
+.company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__btn a {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+  .company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__btn a {
+    font-size: 12px;
+  }
+}
+
+.company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__texts .p-forCorporation__holder__texts__about {
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__texts .p-forCorporation__holder__texts__about {
+    font-size: 10px;
+  }
+}
+
+.company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__texts .p-forCorporation__holder__texts__rt {
+  font-size: 16px;
+}
+
+.company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__texts .p-forCorporation__holder__texts__rt a {
+  color: #004ea2;
+  text-decoration: underline;
+}
+
+.company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__texts .p-forCorporation__holder__texts__rt a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .company .p-forCorporation .p-forCorporation__holder .p-forCorporation__holder__texts .p-forCorporation__holder__texts__rt {
+    font-size: 10px;
+  }
+}
+
+/* ==========================================================================
+*  /company/partner.html
+*  ========================================================================*/
+#partner.company .partnersWanted .partnersWanted__itemList .partnersWanted__itemList__item {
+  background-color: #fff;
+}
+
+#partner.company .partnersWanted .partnersWanted__itemList .partnersWanted__itemList__item .partnersWanted__itemList__item__texts {
+  padding: 20px 15px;
+}
+
+#partner.company .partnersWanted .partnersWanted__itemList .partnersWanted__itemList__item .partnersWanted__itemList__item__texts .partnersWanted__itemList__item__texts__title {
+  font-size: 20px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner.company .partnersWanted .partnersWanted__itemList .partnersWanted__itemList__item .partnersWanted__itemList__item__texts .partnersWanted__itemList__item__texts__title {
+    font-size: 12px;
+  }
+}
+
+#partner.company .partnersWanted .partnersWanted__itemList .partnersWanted__itemList__item .partnersWanted__itemList__item__texts .partnersWanted__itemList__item__texts__title:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  background-color: #202020;
+  width: 20px;
+  height: 1px;
+}
+
+#partner.company .partnersWanted .partnersWanted__itemList .partnersWanted__itemList__item .partnersWanted__itemList__item__texts .partnersWanted__itemList__item__texts__description {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner.company .partnersWanted .partnersWanted__itemList .partnersWanted__itemList__item .partnersWanted__itemList__item__texts .partnersWanted__itemList__item__texts__description {
+    font-size: 10px;
+  }
+}
+
+#partner.company .partnersWanted .partnersWanted__itemList .partnersWanted__itemList__item .partnersWanted__itemList__item__detail {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background-image: url(/files/assets/img/common/frame/arrow_white.png);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-color: #999;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner.company .partnersWanted .partnersWanted__itemList .partnersWanted__itemList__item .partnersWanted__itemList__item__detail {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+}
+
+/* ==========================================================================
+*  /company/partner.html
+*  ========================================================================*/
+#partner2.company .repairWorkshopWanted .repairWorkshopWanted__others {
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner2.company .repairWorkshopWanted .repairWorkshopWanted__others {
+    margin-top: 25px;
+  }
+}
+
+/* ==========================================================================
+*  /company/partner/partner01.html
+*  ========================================================================*/
+#partner01.company-partner .products .products__others .products__others__itemList {
+  margin-bottom: -30px;
+}
+
+#partner01.company-partner .products .products__others .products__others__itemList .products__others__itemList__item {
+  margin-bottom: 30px;
+}
+
+#partner01.company-partner .products .products__others .products__others__itemList .products__others__itemList__item dl {
+  padding-top: 15px;
+}
+
+#partner01.company-partner .products .products__others .products__others__itemList .products__others__itemList__item dl dt {
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner01.company-partner .products .products__others .products__others__itemList .products__others__itemList__item dl dt {
+    font-size: 12px;
+  }
+}
+
+#partner01.company-partner .products .products__others .products__others__itemList .products__others__itemList__item dl dd {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner01.company-partner .products .products__others .products__others__itemList .products__others__itemList__item dl dd {
+    font-size: 12px;
+  }
+}
+
+#partner01.company-partner .afterFollow .afterFollow__btn {
+  width: 385px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#partner01.company-partner .afterFollow .afterFollow__btn a {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner01.company-partner .afterFollow .afterFollow__btn a {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #partner01.company-partner .afterFollow .afterFollow__btn {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+#partner01.company-partner .procedureContract .procedureContract__fig {
+  text-align: center;
+}
+
+/* ==========================================================================
+*  /company/partner/partner02.html
+*  ========================================================================*/
+#partner02.company-partner .sec03 .sec03__sceneList {
+  margin-bottom: -40px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner02.company-partner .sec03 .sec03__sceneList {
+    margin-bottom: -20px;
+  }
+}
+
+#partner02.company-partner .sec03 .sec03__sceneList .sec03__sceneList__item {
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner02.company-partner .sec03 .sec03__sceneList .sec03__sceneList__item {
+    margin-bottom: 20px;
+  }
+}
+
+#partner02.company-partner .sec03 .sec03__sceneList .sec03__sceneList__item dl {
+  padding-top: 15px;
+}
+
+#partner02.company-partner .sec03 .sec03__sceneList .sec03__sceneList__item dl dt {
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner02.company-partner .sec03 .sec03__sceneList .sec03__sceneList__item dl dt {
+    font-size: 12px;
+  }
+}
+
+#partner02.company-partner .sec03 .sec03__sceneList .sec03__sceneList__item dl dd {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner02.company-partner .sec03 .sec03__sceneList .sec03__sceneList__item dl dd {
+    font-size: 12px;
+  }
+}
+
+#partner02.company-partner .sec04 .sec04__grid h4 {
+  font-size: 16px;
+  font-family: "FOT-セザンヌ Pro B", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  margin-bottom: 15px;
+}
+
+#partner02.company-partner .sec04 .sec04__grid--02 {
+  padding-top: 25px;
+
+  padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  #partner02.company-partner .sec04 .sec04__grid--02 {
+    padding-bottom: 0;
+  }
+}
+
+
+/* ==========================================================================
+*  /search/index.html
+*  ========================================================================*/
+
+
+#index.search .searchWindow{
+	background-color: #fff;
+	padding: 30px;
+	margin-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow{
+		padding: 10px;
+		margin-bottom: 30px;
+	}
+}
+#index.search .searchWindow__sarchBar{
+	margin-bottom: 25px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__sarchBar{
+		margin-bottom: 10px;
+	}
+}
+#index.search .searchWindow__sarchBar input[type="text"]{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: 14px;
+	background-color: #f6f6f6;
+	width: 1032px;
+	padding: 15px;
+	float: left;
+	border: 1px solid #e6e6e6;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__sarchBar input[type="text"]{
+		width: 82%;
+		padding: 10px;
+	}
+}
+#index.search .searchWindow__sarchBar__submit{
+	position: relative;
+	width: 100px;
+	float: right;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__sarchBar__submit{
+		width: 18%;
+	}
+}
+#index.search .searchWindow__sarchBar__submit:hover{
+	cursor: pointer;
+}
+#index.search .searchWindow__sarchBar__submit:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-image: url(../../files/assets/img/common/base/icon_search.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 20px auto;
+}
+#index.search .searchWindow__sarchBar__submit input[type="submit"]{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 49px;
+	background-color: #004ea2;
+	font-size: 0;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__sarchBar__submit input[type="submit"]{
+		height: 39px;
+	}
+}
+
+
+
+#index.search .searchWindow__targets{
+	display: inline-block;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__targets{
+		display: block;
+	}
+}
+#index.search .searchWindow__targets >span{
+	font-size: 16px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__targets >span{
+		font-size: 12px;
+	}
+}
+#index.search .searchWindow__targets__list{
+	display: inline-block;
+}
+#index.search .searchWindow__targets__list__item{
+	display: inline-block;
+	margin-left: 30px;
+	font-size: 16px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__targets__list__item{
+		font-size: 12px;
+		margin-left: 10px;
+	}
+}
+#index.search .searchWindow__targets__list__item:first-child{
+	margin-left: 10px;
+}
+#index.search .searchWindow__sort{
+	display: inline-block;
+	margin-left: 35px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__sort{
+		display: block;
+		margin-left: 0;
+	}
+}
+#index.search .searchWindow__sort >span{
+	font-size: 16px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__sort >span{
+		font-size: 12px;
+	}
+}
+#index.search .searchWindow__sort__list{
+	display: inline-block;
+}
+#index.search .searchWindow__sort__list__item{
+	display: inline-block;
+	margin-left: 30px;
+	font-size: 16px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .searchWindow__sort__list__item{
+		font-size: 12px;
+		margin-left: 10px;
+	}
+}
+#index.search .searchWindow__sort__list__item:first-child{
+	margin-left: 10px;
+}
+#index.search .results{
+	margin-bottom: -25px;
+}
+#index.search .results__eachResult{
+	margin-bottom: 25px;
+	background-color: #fff;
+}
+#index.search .results__eachResult__link{
+	padding: 25px;
+	border-bottom: 1px solid #e6e6e6;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .results__eachResult__link{
+		padding: 15px 10px;
+	}
+}
+
+#index.search .results__eachResult__link dl dt{
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .results__eachResult__link dl dt{
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+}
+#index.search .results__eachResult__link dl dt a{
+	color: #004ea2;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#index.search .results__eachResult__link dl dt a:hover{
+	text-decoration: none;
+}
+
+#index.search .results__eachResult__link dl dd{
+	color: #999999;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .results__eachResult__link dl dd{
+		font-size: 10px;
+	}
+}
+#index.search .results__eachResult__description{
+	padding: 25px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .results__eachResult__description{
+		padding: 10px;
+	}
+}
+#index.search .results__eachResult__description > p{
+	font-size: 16px;
+	line-height: 1.875;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .results__eachResult__description > p{
+		font-size: 12px;
+	}
+}
+#index.search .results__eachResult__description > p mark{
+	font-style: normal;
+	margin: 0 5px;
+}
+#index.search .results__eachResult__description__media > figure{
+	width: 245px;
+	float: left;
+	text-align: center;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .results__eachResult__description__media > figure{
+		width: 100%;
+		float: none;
+		margin-bottom: 10px;
+	}
+}
+
+#index.search .results__eachResult__description__media > p{
+	width: 850px;
+	float: right;
+	font-size: 16px;
+	line-height: 1.875;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .results__eachResult__description__media > p{
+		width: 100%;
+		float: none;
+		font-size: 12px;
+	}
+}
+#index.search .results__eachResult__description__media > p mark{
+	font-style: normal;
+	margin: 0 5px;
+}
+#index.search .pager{
+	margin-top: 100px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .pager{
+		margin-top: 50px;
+	}
+}
+#index.search .pager__list{
+	text-align: center;
+	font-size: 0;
+}
+#index.search .pager__list__item{
+	display: inline-block;
+	margin-left: 10px;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .pager__list__item{
+		margin-left: 6px;
+	}
+}
+#index.search .pager__list__item:first-child{
+	margin-left: 0;
+}
+
+#index.search .pager__list__item a{
+	font-size: 18px;
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	border: 1px solid #c9c9c9;
+}
+@media only screen and (max-width: 767px) {
+	#index.search .pager__list__item a{
+		width: 35px;
+		height: 35px;
+		line-height: 35px;;
+	}
+}
+#index.search .pager__list__item.is-disable a{
+	opacity: 0.5!important;
+}
+#index.search .pager__list__item.is-disable a:hover{
+	cursor: default;
+	opacity: 0.5!important;
+}
+#index.search .pager__list__item.is-current a{
+	color: #fff;
+	background-color: #004ea2;
+}
+#index.search .pager__list__item--prev a{
+	background-image: url(../../files/assets/img/common/base/icon_pagerArrow_l.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 9px auto;
+}
+#index.search .pager__list__item--next a{
+	background-image: url(../../files/assets/img/common/base/icon_pagerArrow_r.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 9px auto;
+}

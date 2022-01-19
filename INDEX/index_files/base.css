@@ -1,0 +1,1099 @@
+@charset "UTF-8";
+@media screen and (min-width: 768px) {
+  .js_mainvisual--pc {
+    width: 1192px;
+    height: 470px;
+    margin: 0 auto;
+  }
+}
+
+.js_mainvisual--sp img {
+  width: 100%;
+}
+
+#wrapper #h_fixed_area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transform: translateY(-140px);
+  transition: all 0.2s;
+}
+#wrapper #h_fixed_area.is_scrolled {
+  transform: translateY(0);
+}
+
+.is_locked {
+  -webkit-overflow-scrolling: touch !important;
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+#wrapper #menu_open_area.is_toggled {
+  opacity: 1;
+}
+
+.fixed_block {
+  display: none;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.fixed_block.is_toggled {
+  opacity: 1;
+}
+
+.js_spmenu {
+  position: relative;
+  top: 95px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.js_spmenu__navbar {
+  display: none;
+  border-bottom: 1px solid #d0dde9;
+  background: #fff;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.js_spmenu__navbar.is_toggled {
+  opacity: 1;
+}
+.js_spmenu__navbar a {
+  padding: 10px 10px 10px 26px;
+  display: block;
+  background: url(/files/assets/img/common/base/sp_nav_left.png) no-repeat;
+  background-size: 8px 15px;
+  background-position: 10px;
+}
+.js_spmenu__navbar a.is_first {
+  background: none;
+}
+.js_spmenu__content {
+  position: relative;
+  height: calc(100% - 40px);
+}
+.js_spmenu [data-position] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: calc(100vh - 145px);
+  overflow-y: auto;
+  transform: translateX(100vw);
+  transition: all 0.4s;
+  -webkit-overflow-scrolling: touch;
+}
+.js_spmenu [data-position].is_prev {
+  transform: translateX(-100vw);
+}
+.js_spmenu [data-position].is_now {
+  display: block;
+  z-index: 1;
+  transform: translateX(0);
+}
+.js_spmenu [data-position] li {
+  border-bottom: 1px solid #d0dde9;
+}
+.js_spmenu [data-position] li:last-child {
+  margin-bottom: 80px;
+}
+.js_spmenu [data-position] li a {
+  padding: 10px 26px 10px 26px;
+  display: block;
+}
+.js_spmenu [data-position] li a[data-target] {
+  background: url(/files/assets/img/common/base/sp_nav_right.png) no-repeat;
+  background-size: 8px 15px;
+  background-position: right 10px center;
+}
+.js_spmenu [data-position] li a.active {
+  color: #004ea2;
+  padding: 10px 26px 10px 14px;
+}
+.js_spmenu [data-position] li a.active:before {
+  background: url(/files/assets/img/common/frame/arrow_product.png) no-repeat;
+  content: '';
+  display: inline-block;
+  background-size: 8px 7px;
+  width: 8px;
+  height: 7px;
+  margin-right: 5px;
+}
+.js_spmenu [data-position] .detail_block {
+  padding: 10px 26px;
+  border-bottom: 1px solid #d0dde9;
+}
+.js_spmenu [data-position] .detail_block h2 {
+  font-size: 12px;
+}
+.js_spmenu [data-position] .detail_block h2 a {
+  padding-left: 0px;
+}
+.js_spmenu [data-position] .detail_block li {
+  line-height: 1.4;
+  margin-top: 15px;
+  margin-left: 12px;
+  border-bottom: 0;
+}
+.js_spmenu [data-position] .detail_block li:last-child {
+  margin-bottom: 0;
+}
+.js_spmenu [data-position] .detail_block li a {
+  font-size: 10px;
+  display: block;
+  padding: 0;
+  background: none;
+}
+.js_spmenu [data-position] .detail_block li a.active {
+  color: #004ea2;
+  background: url(/files/assets/img/common/frame/arrow_product.png) no-repeat;
+  background-size: 8px 7px;
+  background-position: left;
+  padding-left: 10px;
+  margin-left: -10px;
+}
+.js_spmenu [data-position] .detail_block li a.active::before {
+  display: none;
+}
+.js_spmenu [data-position="1"] {
+  display: block;
+  position: relative;
+  top: 0;
+  transform: translateX(0);
+}
+
+.detail_nav_area.is_scrolled {
+  position: fixed;
+  top: 70px;
+  z-index: 98;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .detail_nav_area.is_scrolled {
+    top: 50px;
+  }
+}
+
+#product_menu_area {
+  z-index: 101;
+  transform: translateX(430px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#product_menu_area.is_toggled {
+  transform: translateX(0);
+}
+
+.js_modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: url("/files/assets/img/common/frame/black_back.png");
+  content: '';
+}
+
+.js_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 97;
+  width: 100%;
+  height: 120%;
+  background: #fff;
+  content: '';
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  /* height: 100%; */
+  min-height: 1px;
+  display: none;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide a img{
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}
+.slick-slide a:hover img{
+	opacity: 0.7;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+/* Icons */
+/* Arrows */
+/* Dots */
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+@media all and (max-width: 767px) {
+  .slick-dots {
+    bottom: 10px !important;
+  }
+  .slick-dots li {
+    width: 14px !important;
+    height: 14px !important;
+    margin: 0 5px !important;
+  }
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  margin: 0 6px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  margin: 0 5px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  overflow: hidden;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\bt-mv.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 14px 14px;
+  opacity: .9;
+  cursor: pointer;
+  line-height: 0;
+  font-size: 0;
+}
+.slick-dots li.slick-active button {
+  background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\bt-mv-active.png);
+}
+
+@media all and (min-width: 768px) {
+  /*共通*/
+  body {
+    -webkit-text-size-adjust: 100%;
+    font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202020;
+    background-color: #f4f4f4;
+  }
+
+  img {
+    vertical-align: bottom;
+    border: none;
+    backface-visibility: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: #202020;
+    text-decoration: none;
+    backface-visibility: hidden;
+  }
+  a:hover {
+    color: #202020;
+    backface-visibility: hidden;
+  }
+
+  .sp {
+    display: none !important;
+  }
+
+  /*============================
+  #wrapper
+  ============================*/
+  #wrapper {
+    min-width: 1192px;
+    overflow: hidden;
+    /*============================
+    #h_fixed_area
+    ============================*/
+  }
+  #wrapper header {
+    width: 1192px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 0;
+    background-color: #fff;
+    height: 130px;
+  }
+  #wrapper header a:hover{
+    text-decoration: underline;
+  }
+  #wrapper header h1 {
+    width: 140px;
+    display: inline-block;
+    margin-top: 48px;
+    margin-left: 20px;
+    font-size: 14px;
+    margin-right: 60px;
+  }
+  #wrapper header h1 img {
+    width: 100%;
+  }
+  #wrapper header .nav_area {
+    position: absolute;
+    top: 50px;
+    left: 220px;
+  }
+  #wrapper header .nav_area li {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 32px;
+    vertical-align: top;
+  }
+  #wrapper header .nav_area li:first-child {
+    margin-left: 0;
+  }
+  #wrapper header .nav_area li a {
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #wrapper header .nav_area li a:hover {
+    color: #004ea2;
+  }
+  #wrapper header .nav_area li a.active {
+    color: #004ea2;
+  }
+  #wrapper header .nav_area li a.active:after {
+    content: '';
+    width: 100%;
+    background-color: #004ea2;
+    height: 4px;
+    display: block;
+    margin-top: 4px;
+  }
+  #wrapper header .sub_area {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 0;
+  }
+  #wrapper header .sub_area li {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+  #wrapper header .sub_area li:first-child {
+    margin-left: 0;
+  }
+  #wrapper header .sub_area li:nth-child(4) a {
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\h_globe.png) no-repeat;
+    padding-left: 16px;
+    background-position: left;
+  }
+  #wrapper header .sub_area li:nth-child(5) {
+    margin-left: 30px;
+  }
+  #wrapper header .sub_area li:nth-child(5) a {
+    background: none;
+  }
+  #wrapper header .sub_area li a {
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\h_arrow.png) no-repeat;
+    padding-left: 10px;
+    background-position: left;
+  }
+  #wrapper header .wrap_shop {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    font-size: 0;
+	z-index: 99;
+  }
+  #wrapper header .wrap_shop .search_area {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: top;
+	position: relative;
+  }
+  #wrapper header .wrap_shop .search_area form .search {
+    /* background-image: url(/files/assets/img/common/base/icon_glass.png); */
+    background-repeat: no-repeat;
+    background-position: 18px;
+    padding: 17px 60px 17px 10px;
+    border: 1px solid #e6e6e6;
+    background-color: #f6f6f6;
+    width: 280px;
+    font-size: 14px;
+  }
+  #wrapper header .wrap_shop .search_area form .searchBtn {
+    display:block;
+    position:absolute;
+    background: #004ea2;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    padding: 16px;
+  }
+  #wrapper header .wrap_shop .btn_shopping {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    margin-left: 30px;
+  }
+  #wrapper header .wrap_shop .btn_shopping a {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_cart.png);
+    background-repeat: no-repeat;
+    background-position: 23px;
+    padding: 15px 20px 15px 53px;
+    background-color: #ffb93e;
+    width: 160px;
+    display: block;
+  }
+  #wrapper #h_fixed_area {
+    width: 100%;
+    background-color: #fff;
+  }
+  #wrapper #h_fixed_area .lower {
+    width: 1192px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 0;
+    background-color: #fff;
+    height: 70px;
+  }
+  #wrapper #h_fixed_area .lower h1 {
+    width: 140px;
+    display: inline-block;
+    margin-top: 18px;
+    margin-left: 20px;
+    font-size: 14px;
+    margin-right: 60px;
+  }
+  #wrapper #h_fixed_area .lower h1 img {
+    width: 100%;
+  }
+  #wrapper #h_fixed_area .lower .nav_area {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 20px;
+  }
+  #wrapper #h_fixed_area .lower .nav_area li {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 32px;
+  }
+  #wrapper #h_fixed_area .lower .nav_area li:first-child {
+    margin-left: 0;
+  }
+  #wrapper #h_fixed_area .lower .nav_area li a.active {
+    position: relative;
+  }
+  #wrapper #h_fixed_area .lower .nav_area li a.active:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background-color: #004ea2;
+    height: 4px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+  }
+  #wrapper #h_fixed_area a:hover {
+	text-decoration: underline;
+  }
+  #wrapper #h_fixed_area .lower .nav_area li a:hover {
+    color: #004DA3;
+  }
+  #wrapper #h_fixed_area .lower .wrap_shop {
+    position: absolute;
+    top: 9px;
+    right: 20px;
+    font-size: 0;
+  }
+  #wrapper #h_fixed_area .lower .wrap_shop .search_area {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: top;
+	position: relative;
+  }
+  #wrapper #h_fixed_area .lower .wrap_shop .search_area form .search {
+    /* background-image: url(/files/assets/img/common/base/icon_glass.png); */
+    background-repeat: no-repeat;
+    background-position: 18px;
+    padding: 17px 60px 17px 10px;
+    border: 1px solid #e6e6e6;
+    background-color: #f6f6f6;
+    width: 280px;
+    font-size: 14px;
+  }
+  #wrapper #h_fixed_area .lower .wrap_shop .search_area form .searchBtn {
+    display:block;
+    position:absolute;
+    background: #004ea2;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    padding: 16px;
+  }
+  #wrapper #h_fixed_area .lower .wrap_shop .btn_shopping {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    margin-left: 30px;
+  }
+  #wrapper #h_fixed_area .lower .wrap_shop .btn_shopping a {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_cart.png);
+    background-repeat: no-repeat;
+    background-position: 23px;
+    padding: 15px 20px 15px 53px;
+    background-color: #ffb93e;
+    width: 160px;
+    display: block;
+  }
+  #wrapper footer a:hover {
+    text-decoration: underline;
+  }
+  #wrapper footer .blue_area {
+    width: 100%;
+    background-color: #004ea2;
+  }
+  #wrapper footer .blue_area .lower {
+    width: 1192px;
+    margin: 0 auto;
+    padding: 50px 0 40px;
+  }
+  #wrapper footer .blue_area .lower .poroduct {
+    font-size: 0;
+    padding-bottom: 30px;
+  }
+  #wrapper footer .blue_area .lower .poroduct li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 34px;
+    font-size: 14px;
+  }
+  #wrapper footer .blue_area .lower .poroduct li:first-child {
+    margin-left: 0;
+  }
+  #wrapper footer .blue_area .lower .poroduct li strong {
+    color: #fff;
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  #wrapper footer .blue_area .lower .poroduct li a {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  #wrapper footer .blue_area .lower .support {
+    font-size: 0;
+    padding-top: 30px;
+    border-top: 1px solid #5790cd;
+  }
+  #wrapper footer .blue_area .lower .support li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
+    font-size: 14px;
+  }
+  #wrapper footer .blue_area .lower .support li:first-child {
+    margin-left: 0;
+  }
+  #wrapper footer .blue_area .lower .support li a {
+    color: #fff;
+  }
+  #wrapper footer .bottom_area {
+    width: 100%;
+    background-color: #fff;
+  }
+  #wrapper footer .bottom_area .lower {
+    width: 1192px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 85px;
+  }
+  #wrapper footer .bottom_area .lower h2 {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 182px;
+  }
+  #wrapper footer .bottom_area .lower h2 a img {
+    width: 100%;
+  }
+  #wrapper footer .bottom_area .lower ul {
+    text-align: right;
+    font-size: 0;
+    padding-top: 50px;
+  }
+  #wrapper footer .bottom_area .lower ul li {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 40px;
+  }
+  #wrapper footer .bottom_area .lower ul li:first-child {
+    margin-left: 0;
+  }
+  #wrapper footer .bottom_area .lower p {
+    text-align: right;
+    margin-top: 20px;
+  }
+  #wrapper footer .bottom_area .lower p small {
+    color: #999;
+    font-size: 12px;
+  }
+
+  #pagetop {
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+  }
+  #pagetop p {
+    background-color: #000;
+  }
+  #pagetop p a {
+    display: block;
+    padding: 22px 20px;
+    background-color: #004da3;
+    line-height: 1;
+  }
+  #pagetop p a img {
+    width: 20px;
+    height: 11px;
+  }
+}
+@media all and (max-width: 767px) {
+  /*共通*/
+  body {
+    -webkit-text-size-adjust: 100%;
+    font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #202020;
+    background-color: #f4f4f4;
+  }
+
+  img {
+    vertical-align: bottom;
+    border: none;
+    backface-visibility: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: #202020;
+    text-decoration: none;
+    backface-visibility: hidden;
+  }
+  a:hover {
+    color: #202020;
+    backface-visibility: hidden;
+  }
+
+  .pc {
+    display: none !important;
+  }
+
+  /*============================
+  #wrapper
+  ============================*/
+  #wrapper {
+    overflow: hidden;
+    padding-top: 50px;
+    /*============================
+    #menu_open_area
+    ============================*/
+  }
+  #wrapper header {
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 50px;
+    font-size: 0;
+    background-color: #fff;
+    transform: translate3d(0, 0, 0);
+  }
+  #wrapper header h1 {
+    width: 92px;
+	height: 50px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 14px 0;
+  }
+  #wrapper header h1 img {
+    width: 100%;
+  }
+  #wrapper header .sub_area {
+    position: absolute;
+    right: 59px;
+    top: 21px;
+    font-size: 0;
+  }
+  #wrapper header .sub_area li {
+    width: 80px;
+  }
+  #wrapper header .sub_area li:first-child {
+    margin-left: 0;
+  }
+  #wrapper header .sub_area li:nth-child(4) a {
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\h_globe.png) no-repeat;
+    padding-left: 16px;
+    background-position: left;
+  }
+  #wrapper header .sub_area li:nth-child(5) {
+    margin-left: 30px;
+  }
+  #wrapper header .sub_area li:nth-child(5) a {
+    background: none;
+  }
+  #wrapper header .sub_area li a img {
+    width: 100%;
+  }
+  #wrapper header .menu_area {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #d0dde9;
+  }
+  #wrapper header .menu_area p {
+    text-align: center;
+  }
+  #wrapper header .menu_area p a {
+    display: block;
+    font-size: 9px;
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+  }
+  #wrapper header .menu_area p a:before {
+    content: '';
+    display: block;
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\menu.png) no-repeat;
+    background-size: 15px 15px;
+    width: 15px;
+    height: 15px;
+    margin: 0 auto 3px;
+  }
+  #wrapper header .menu_area p a.is_toggled:before {
+    content: '';
+    display: block;
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\menu_close.png) no-repeat;
+    background-size: 15px 15px;
+    width: 15px;
+    height: 15px;
+    margin: 0 auto 3px;
+  }
+  #wrapper .fixed_block .search_block {
+    background-color: #004ea2;
+    padding: 10px;
+  }
+  #wrapper .fixed_block .search_block form {
+    width: 300px;
+    margin: 0 auto;
+  }
+  #wrapper .fixed_block .search_block form input[type="text"] {
+    padding: 11px;
+    border-radius: 3px 0 0 3px;
+    border: none;
+    background-color: #e5e5e5;
+    width: 265px;
+    height: 35px;
+  }
+  #wrapper .fixed_block .search_block form input[type="image"] {
+    padding: 10px;
+    border-radius: 0 3px 3px 0;
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    box-sizing: content-box;
+    border: none;
+  }
+  #wrapper .fixed_block .back_block {
+    border-bottom: 1px solid #d0dde9;
+  }
+  #wrapper .fixed_block .back_block a {
+    padding: 10px 10px 10px 26px;
+    display: block;
+    background: url(/files/assets/img/common/base/sp_nav_left.png) no-repeat;
+    background-size: 8px 15px;
+    background-position: 10px;
+  }
+  #wrapper #menu_open_area {
+    display: none;
+    position: fixed;
+    top: 50px;
+    z-index: 98;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh - 50px);
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  #wrapper footer .blue_area {
+    background-color: #004ea2;
+  }
+  #wrapper footer .blue_area .lower {
+    margin: 0 10px;
+    padding: 30px 0 30px;
+  }
+  #wrapper footer .blue_area .lower .poroduct {
+    font-size: 0;
+    padding-bottom: 20px;
+    margin-left: -20px;
+  }
+  #wrapper footer .blue_area .lower .poroduct li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    font-size: 12px;
+    min-width: 130px;
+    margin-top: 5px;
+  }
+  #wrapper footer .blue_area .lower .poroduct li:first-child {
+    display: block;
+    margin-bottom: 6px;
+    width: 100%;
+  }
+  #wrapper footer .blue_area .lower .poroduct li strong {
+    color: #fff;
+    font-size: 12px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  #wrapper footer .blue_area .lower .poroduct li a {
+    color: #fff;
+    font-size: 12px;
+  }
+  #wrapper footer .blue_area .lower .wrap_support {
+    border-top: 1px solid #5790cd;
+  }
+  #wrapper footer .blue_area .lower .wrap_support .support {
+    font-size: 0;
+    padding-top: 20px;
+    margin-left: -20px;
+  }
+  #wrapper footer .blue_area .lower .wrap_support .support li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    font-size: 12px;
+    min-width: 130px;
+    margin-top: 5px;
+  }
+  #wrapper footer .blue_area .lower .wrap_support .support li a {
+    color: #fff;
+  }
+  #wrapper footer .bottom_area {
+    width: 100%;
+    background-color: #fff;
+  }
+  #wrapper footer .bottom_area .lower {
+    margin: 0 10px;
+    position: relative;
+    padding-bottom: 45px;
+    padding-top: 30px;
+  }
+  #wrapper footer .bottom_area .lower h2 {
+    width: 147px;
+    margin: 0 auto;
+  }
+  #wrapper footer .bottom_area .lower h2 a img {
+    width: 100%;
+  }
+  #wrapper footer .bottom_area .lower ul {
+    text-align: center;
+    font-size: 0;
+    padding-top: 20px;
+  }
+  #wrapper footer .bottom_area .lower ul li {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  #wrapper footer .bottom_area .lower ul li:first-child {
+    margin-top: 0;
+  }
+  #wrapper footer .bottom_area .lower p {
+    margin-top: 15px;
+    text-align: center;
+    -moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  #wrapper footer .bottom_area .lower p small {
+    color: #999;
+    font-size: 9px;
+  }
+
+  #menu_open_area .btn_block {
+    width: 100%;
+    font-size: 0;
+  }
+  #menu_open_area .btn_block .btn_shopping {
+    width: 50%;
+    display: inline-block;
+    font-size: 12px;
+  }
+  #menu_open_area .btn_block .btn_shopping a {
+    width: 100%;
+    display: block;
+    padding: 12px 12px 12px 30px;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_cart.png);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 10px;
+    background-color: #ffb93e;
+    height: 42px;
+    text-align: center;
+  }
+  #menu_open_area .btn_block .btn_global {
+    width: 50%;
+    display: inline-block;
+    font-size: 12px;
+  }
+  #menu_open_area .btn_block .btn_global a {
+    width: 100%;
+    display: block;
+    padding: 12px 12px 12px 30px;
+    background-image: url(/files/assets/img/common/base/sp_h_globe.png);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 10px;
+    height: 42px;
+    text-align: center;
+  }
+
+  #pagetop {
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+  }
+  #pagetop p {
+    background-color: #000;
+  }
+  #pagetop p a {
+    display: block;
+    padding: 14px 12px;
+    background-color: #004da3;
+    line-height: 1;
+    font-size: 0;
+  }
+  #pagetop p a img {
+    width: 12px;
+    height: 7px;
+  }
+}
+
+/*# sourceMappingURL=base.css.map */

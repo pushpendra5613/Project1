@@ -1,0 +1,361 @@
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+module.exports = function () {
+	function SetScrollAnim(param) {
+		_classCallCheck(this, SetScrollAnim);
+
+		this.param = param;
+	}
+
+	_createClass(SetScrollAnim, [{
+		key: "initialize",
+		value: function initialize() {
+			var _this = this;
+			var $target = $(_this.param.target);
+			$target.each(function () {
+				var $this = $(this);
+				var waypoint = new Waypoint({
+					element: $this,
+					handler: function handler(direction) {
+						if (direction == 'up') {
+							if (_this.param.reverse) {
+								$this.removeClass("is-animated");
+							}
+						} else {
+							$this.addClass("is-animated");
+						}
+					},
+					offset: _this.param.offset
+				});
+			});
+		}
+	}]);
+
+	return SetScrollAnim;
+}();
+
+/*
+var SetScrollAnim = require("./mod/setScrollAnim.js");
+
+var SetScrollAnim = new SetScrollAnim({
+	target:".js_setScrollAnim",
+	reverse:false,
+	offset:"70%"
+});
+SetScrollAnim.initialize();
+*/
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+(function ($, window, undefined) {
+
+    "use strict";
+
+    //各モジュールの読み込み
+
+    var SetScrollAnim = require("./_mod/setScrollAnim.js");
+
+    /***************************************
+     *
+     *   ChangeViewport
+     *   実機タブレット時のビューポートの書き換え
+     *
+     ****************************************/
+
+    var ChangeViewport = function ChangeViewport() {};
+    ChangeViewport.prototype.initialize = function () {
+        var _this = this;
+        $('meta[name="viewport"]').attr('content', 'width=1000');
+    };
+    //初期化
+    if (FUJI.device === "tab") {
+        var changeViewport = new ChangeViewport();
+        changeViewport.initialize();
+    }
+
+    /***************************************
+     *
+     *   SetPageScroll
+     *   ページ内リンク
+     *
+     ****************************************/
+
+    var SetPageScroll = function SetPageScroll() {
+        this.$target = $(".js-pageScroll");
+        this.lgHeaderHeight = 90;
+        this.xsHeaderHeight = 50;
+    };
+    SetPageScroll.prototype.initialize = function () {
+        var _this = this;
+        _this.$target.on("click", function (e) {
+            e.preventDefault();
+            var currentHeaderHeight;
+            if (FUJI.viewMode === "lg") {
+                currentHeaderHeight = _this.lgHeaderHeight;
+            } else {
+                currentHeaderHeight = _this.xsHeaderHeight;
+            }
+            var href = $(this).attr("href");
+            if (href === "#anc_pageTop") {
+                var target = $("body");
+                target.velocity("scroll", {
+                    duration: 1200,
+                    easing: "ease",
+                    complete: function complete() {
+                        $.publish("onPageScroll");
+                    }
+                });
+            } else {
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                target.velocity("scroll", {
+                    duration: 1200,
+                    offset: -currentHeaderHeight,
+                    easing: "ease",
+                    complete: function complete() {
+                        $.publish("onPageScroll");
+                    }
+                });
+            }
+        });
+    };
+    //初期化
+    var setPageScroll = new SetPageScroll();
+    setPageScroll.initialize();
+
+    /**************************************************
+     *
+     *	ResetPageScrollPos
+     *	他リンクからのページ内リンクの位置を調整
+     *
+     ***************************************************/
+    var ResetPageScrollPos = function ResetPageScrollPos() {
+        this.lgHeaderHeight = 90;
+        this.xsHeaderHeight = 50;
+    };
+    ResetPageScrollPos.prototype.initialize = function () {
+        var _this = this;
+        var currentHeaderHeight;
+        if (FUJI.viewMode === "lg") {
+            currentHeaderHeight = _this.lgHeaderHeight;
+        } else {
+            currentHeaderHeight = _this.xsHeaderHeight;
+        }
+        $.subscribe("onLoadHandler", function () {
+            var url = $(location).attr('href');
+            if (url.indexOf("?id=") != -1) {
+                var id = url.split("?id=");
+                var $target = $('#' + id[id.length - 1]);
+                if ($target.length) {
+                    var pos = $target.offset().top - currentHeaderHeight;
+                    $("html, body").animate({
+                        scrollTop: pos
+                    }, 1);
+                }
+            }
+        });
+    };
+    //初期化
+    var resetPageScrollPos = new ResetPageScrollPos();
+    resetPageScrollPos.initialize();
+
+    /**************************************************
+     *
+     *	FixXsHeader
+     *
+     ***************************************************/
+    var FixXsHeader = function FixXsHeader() {
+        this.$target = $(".l-header__xsContents__holder");
+    };
+    FixXsHeader.prototype.initialize = function () {
+        var _this = this;
+        var xsHeaderHolderPosY = 20;
+        $.subscribe("onScrollHandler", function () {
+            if (FUJI.scrollY > xsHeaderHolderPosY) {
+                _this.$target.addClass("is-fixed");
+            } else {
+                _this.$target.removeClass("is-fixed");
+            }
+        });
+    };
+    //初期化
+    var fixXsHeader = new FixXsHeader();
+    fixXsHeader.initialize();
+
+    /**************************************************
+     *
+     *	fixLgHeader
+     *
+     ***************************************************/
+    var FixLgHeader = function FixLgHeader() {
+        this.$target = $(".l-header__lgContents__holder");
+    };
+    FixLgHeader.prototype.initialize = function () {
+        var _this = this;
+        var lgHeaderHolderPosY = 60;
+        $.subscribe("onScrollHandler", function () {
+            if (FUJI.scrollY > lgHeaderHolderPosY) {
+                _this.$target.addClass("is-fixed");
+            } else {
+                _this.$target.removeClass("is-fixed");
+            }
+        });
+    };
+    //初期化
+    var fixLgHeader = new FixLgHeader();
+    fixLgHeader.initialize();
+
+    /**************************************************
+     *
+     *	SetScrollAnim
+     *	スクロールアニメーション
+     *
+     ***************************************************/
+    //初期化
+    var setScrollAnim = new SetScrollAnim({
+        target: ".js-scrollAnim",
+        reverse: false,
+        offset: "70%"
+    });
+    setScrollAnim.initialize();
+
+    /**************************************************
+     *
+     *	SetToggleMenu
+     *	PC用ヘッダーメニュー
+     *
+     ***************************************************/
+    var SetToggleMenu = function SetToggleMenu() {
+        this.$trigger = $(".l-header__lgContents__holder__menuNav__list__item__anchor");
+        this.$toggleMenu = $(".l-header__lgContents__holder__menuNav__list__item__toggleMenu");
+    };
+    SetToggleMenu.prototype.initialize = function () {
+        var _this = this;
+        _this.$trigger.on("click", function (e) {
+            if ($(this).next().length) {
+                e.preventDefault();
+            }
+            if ($(this).hasClass("is-clicked")) {
+                $(this).removeClass("is-clicked");
+                $(this).next().hide();
+            } else {
+                _this.$trigger.removeClass("is-clicked");
+                $(this).addClass("is-clicked");
+                _this.$toggleMenu.hide();
+                $(this).next().show();
+            }
+        });
+    };
+
+    //初期化
+    var setToggleMenu = new SetToggleMenu();
+    setToggleMenu.initialize();
+
+    /**************************************************
+     *
+     *	SetScrollTopBtn
+     *	PC用ヘッダーメニュー
+     *
+     ***************************************************/
+    var SetScrollTopBtn = function SetScrollTopBtn() {
+        this.$target = $(".p-scrollTopBtn");
+        this.amount = 500;
+    };
+    SetScrollTopBtn.prototype.initialize = function () {
+        var _this = this;
+        $.subscribe("onScrollHandler", function () {
+            if (FUJI.scrollY >= 500) {
+                _this.$target.addClass("is-visible");
+            } else {
+                _this.$target.removeClass("is-visible");
+            }
+        });
+    };
+
+    //初期化
+    var setScrollTopBtn = new SetScrollTopBtn();
+    setScrollTopBtn.initialize();
+
+    /**************************************************
+     *
+     *	SetSlideMenu
+     *	スマホ用ヘッダーメニュー
+     *
+     ***************************************************/
+    var SetSlideMenu = function SetSlideMenu() {
+        this.$menuBtn = $(".l-header__xsContents__holder__menuBtn");
+        this.$closeBtn = $(".l-header__xsContents__slideMenu__closeBtn");
+        this.$slideMenu = $(".l-header__xsContents__slideMenu");
+    };
+    SetSlideMenu.prototype.initialize = function () {
+        var _this = this;
+        _this.$menuBtn.on("click", function (e) {
+            e.preventDefault();
+            _this.$slideMenu.addClass("is-slided");
+        });
+        this.$closeBtn.on("click", function (e) {
+            e.preventDefault();
+            _this.$slideMenu.removeClass("is-slided");
+        });
+    };
+
+    //初期化
+    var setSlideMenu = new SetSlideMenu();
+    setSlideMenu.initialize();
+
+    /**************************************************
+     *
+     *	SetShoppingGuide
+     *	お買い物ガイド
+     *
+     ***************************************************/
+    var SetShoppingGuide = function SetShoppingGuide() {
+        this.$dt = $(".p-shoppingGuide__column__col__dl__dt");
+        this.$dd = $(".p-shoppingGuide__column__col__dl__dd");
+    };
+    SetShoppingGuide.prototype.initialize = function () {
+        var _this = this;
+        _this.setInitStatus();
+        $.subscribe("onResizeHandler", function () {
+            _this.setInitStatus();
+        });
+        _this.$dt.on("click", function () {
+            if (FUJI.viewMode === "xs") {
+                if (!$(this).hasClass("is-clicked")) {
+                    $(this).addClass("is-clicked");
+                    $(this).next().show();
+                } else {
+                    $(this).removeClass("is-clicked");
+                    $(this).next().hide();
+                }
+            } else {
+                return;
+            }
+        });
+    };
+    SetShoppingGuide.prototype.setInitStatus = function () {
+        var _this = this;
+        if (FUJI.viewMode === "xs") {
+            _this.$dt.removeClass("is-clicked");
+            _this.$dd.hide();
+            /*最初だけ表示*/
+            _this.$dt.first().addClass("is-clicked");
+            _this.$dd.first().show();
+        } else {
+            _this.$dd.show();
+        }
+    };
+
+    //初期化
+    if ($(".p-shoppingGuide").length > 0) {
+        var setShoppingGuide = new SetShoppingGuide();
+        setShoppingGuide.initialize();
+    }
+})(jQuery, window);
+
+},{"./_mod/setScrollAnim.js":1}]},{},[2]);

@@ -1,0 +1,499 @@
+//ロールオーバー関数（同じ画像ファイル名+_onをロールオーバー画像にする）
+$.fn.rollover = function(){
+	return this.each(function(){
+		var _on = $(this).attr('src').replace(/\.\w+$/, '_on$&');
+		var src = $(this).attr('src');
+		$('<img>').attr('src', _on);
+		$(this).hover(function(){
+			$(this).attr('src', _on);
+		},function(){
+			$(this).attr('src', src);
+		});
+	});
+};
+
+//スマホ用の設定：ロードした時にアドレスバーを隠しfirst-viewを確保
+/*window.onload = function() {
+	if(location.hash == ""){
+		setTimeout(scrollTo, 100, 0, 1);
+	}
+}*/
+
+//ロールオーバー：透明度で処理
+document.addEventListener('DOMContentLoaded', function () {
+	var mql = window.matchMedia('screen and (max-width: 767px)');
+	function checkBreakPoint(mql) {
+		if (!mql.matches) {
+			$('.allbtn_ro a img, a img.btn_ro, .allbtn_ro input:image, input.btn_ro:image, .allbtn_txt a, .btn_txt').hover(function(){
+				$(this).stop().fadeTo(200, 0.4);
+			},function(){
+				$(this).stop().fadeTo(200, 1.00);
+			});
+		}
+	}
+	mql.addListener(checkBreakPoint);
+	checkBreakPoint(mql);
+});
+
+
+$(function() {
+
+	//ロールオーバー：画像と差し替え処理
+	$('.allbtn a img, a img.btn, .allbtn input:image, input.btn:image').rollover();
+
+
+
+
+	//ページトップスクロール
+	var SetScrollTopBtn = function(){
+		this.pageTopFlag = false;
+	};
+	SetScrollTopBtn.prototype.initialize = function(){
+		var _this = this;
+		$('body').prepend('<div id="pagetop"><p><a href="#wrapper" class="btn_txt"><img src="/files/assets/img/common/base/pagetop.png" alt="↑"></a></p></div>');
+		$(window).on('scroll', function(){
+			if($(this).scrollTop() > 500 && _this.pageTopFlag != true){
+				$('#pagetop').fadeIn();
+				_this.pageTopFlag = true;
+			}else if($(this).scrollTop() <= 500 && _this.pageTopFlag == true) {
+				$('#pagetop').fadeOut();
+				_this.pageTopFlag = false;
+			}else{
+				return;
+			}
+		});
+	};
+	var setScrollTopBtn = new SetScrollTopBtn();
+	setScrollTopBtn.initialize();
+
+
+
+	//スムーススクロール
+	var SetPageScroll = function SetPageScroll() {
+		this.lgHeaderHeight = 70;
+		this.xsHeaderHeight = 50;
+		this.lgDetailNavHeight = 59;
+		this.xsDetailNavHeight = 45;
+		this.viewMode = null;
+	};
+	SetPageScroll.prototype.initialize = function () {
+		var _this = this;
+		var currentHeaderHeight;
+		$('a[href^=#]').on("click",function(e){
+			e.preventDefault();
+			//サイドメニュー開閉のボタンかどうか
+			if ($('#product_menu_area').find($(this)).length) {
+				return;
+			}
+			if($("#pagetop").find($(this)).length){
+				// console.log("onPageScrollTop");
+				$("html, body").animate({ scrollTop: 0 },500,"swing");
+				return;
+			}
+
+			//詳細ナビがあるかどうか
+			if($(".detail_nav_area").length){
+				if(_this.viewMode === "lg"){
+					currentHeaderHeight = _this.lgHeaderHeight + _this.lgDetailNavHeight;
+				}else{
+					currentHeaderHeight = _this.xsHeaderHeight + _this.xsDetailNavHeight;
+				}
+			}else{
+				if(_this.viewMode === "lg"){
+					currentHeaderHeight = _this.lgHeaderHeight;
+				}else{
+					currentHeaderHeight = _this.xsHeaderHeight;
+				}
+			}
+			var href = $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			if(target.offset()) {
+				var pos = target.offset().top - currentHeaderHeight;
+				$("html, body").animate({ scrollTop: pos },500,"swing");
+			}
+
+		});
+	};
+	SetPageScroll.prototype.setViewMode = function () {
+		var _this = this;
+		if($(window).width() > 768) {
+			_this.viewMode = "lg"
+		}else{
+			_this.viewMode = "xs"
+		}
+	};
+	var setPageScroll = new SetPageScroll();
+	setPageScroll.initialize();
+
+
+
+	/*
+	$(document).on('click', 'a[href^="#"]', function(e){
+		var scrollSpeed = 500;
+		var $target = $(this.hash);
+		var mousewheel = "onwheel" in document ? "wheel" : "onmousewheel" in document ? "mousewheel" : "DOMMouseScroll";
+		var top;
+
+		if( $target.size() < 1 ) return false;
+		top = $target.offset().top;
+		top = Math.min(top, $(document).height() - $(window).height());
+
+		$(document).on(mousewheel, function(e){ e.preventDefault(); });
+		$('html, body').stop().animate({scrollTop: top}, scrollSpeed, 'swing', function(){
+			$(document).off(mousewheel);
+		});
+
+		return false;
+	});
+	*/
+
+	//PIE
+	if(window.PIE) {
+		$('.pie').each(function() { PIE.attach(this); });
+	}
+
+	//プレースホルダー
+	try{
+		$('[placeholder]').ahPlaceholder({
+			placeholderColor : '#999',
+			placeholderAttr : 'placeholder',
+			likeApple : false
+		});
+	}catch(e){
+	}
+
+	$(".fixed_block").hide();
+
+});
+
+
+//アコーディオン
+$(function(){
+
+$(".accordion p").click(function(){
+    $(this).next("ul").slideToggle();
+    $(this).children("span").toggleClass("open");
+});
+
+$(".accordion dt").click(function(){
+	var that = $(this);
+    $(this).next("dd").slideToggle(400,function (){
+    	if($(this).css("display")=="block"){
+    		that.html("閉じる");
+    	}else{
+    		that.html("全てのマッサージチェアを見る");
+    	}
+	});
+//    $(this).next("dd").siblings("dd").slideUp();
+    $(this).toggleClass("open");
+//    $(this).siblings("dt").removeClass("open");
+	if($('.menu_area').css("display")=="none"){
+		AjustHeight(".col02_block", [".sup","h3",".num"], 4);
+	}else{
+		AjustHeight(".col02_block", [".sup","h3",".num"], 2);
+	}
+});
+
+});
+
+
+//-----------------------------------------------------------------------------------
+// Added by Guillemot Inc.
+//-----------------------------------------------------------------------------------
+
+$(function(){
+
+	// Fire mainvisual slider (for top page)
+	if($('.js_mainvisual--pc').length || $('.js_mainvisual--sp').length) {
+		$(window).on('load resize', function(){
+			if($(this).width() > 768) {
+				$('.js_mainvisual--pc').slick({
+					dots: true,
+					arrows: false,
+				  infinite: true,
+				  speed: 1500,
+					autoplay: true,
+			  	autoplaySpeed: 4000,
+					// adaptiveHeight: true
+				});
+			} else {
+				$('.js_mainvisual--sp').slick({
+					dots: true,
+					arrows: false,
+				  infinite: true,
+				  speed: 1500,
+					autoplay: true,
+			  	autoplaySpeed: 4000,
+					// adaptiveHeight: true
+				});
+			}
+		});
+	}
+
+	// Toggle SP menu - toggle sub menus
+	// to next
+	$('.js_spmenu__content a').on('click', function(){
+		if($(this).data('target')) {
+			if($('.js_spmenu__navbar a').hasClass('is_first')) $('.js_spmenu__navbar a').removeClass('is_first');
+			var nowPosition = $(this).parents('ul').data('position');
+			var targetPosition = nowPosition + 1;
+			var nowMenu = $(this).parents('ul').data('menu');
+			var targetMenu = $(this).data('target');
+			if(nowPosition == 1) parentMenuName = $(this).html();
+			if(targetPosition == 3) $('.js_spmenu__navbar a').html(parentMenuName+'TOP');
+
+			$('.js_spmenu [data-position="'+nowPosition+'"][data-menu="'+nowMenu+'"]').removeClass('is_now').addClass('is_prev');
+			$('.js_spmenu [data-position="'+targetPosition+'"][data-menu="'+targetMenu+'"]').addClass('is_now');
+
+			var targetMenuHeight = 0;
+			$('.js_spmenu [data-position="'+targetPosition+'"][data-menu="'+targetMenu+'"] > li').each(function(){
+				targetMenuHeight += $(this).outerHeight(true);
+			});
+			$('.js_spmenu [data-position="'+targetPosition+'"][data-menu="'+targetMenu+'"], .js_spmenu').css('height', targetMenuHeight);
+			$('.js_spmenu__navbar a').data('target', targetPosition);
+
+			return false;
+
+		} else {
+			console.alert('WARN: "data-target" attribute is needed for .js_spmenu__content links.');
+		}
+	});
+
+	// to prev
+	$('.js_spmenu__navbar a').on('click', function(){
+		var nowPosition = $(this).data('target');
+		var targetPosition = nowPosition - 1;
+		if(!nowPosition || nowPosition == 1) return;
+		if(targetPosition == 1) $(this).addClass('is_first');
+		if(targetPosition == 2) $(this).html('TOP');
+		$('.js_spmenu [data-position="'+nowPosition+'"]').removeClass('is_now');
+		var targetMenuHeight = 0;
+		$('.js_spmenu [data-position="'+targetPosition+'"].is_prev > li').each(function(){
+			targetMenuHeight += $(this).outerHeight(true);
+		});
+		$('.js_spmenu [data-position="'+targetPosition+'"].is_prev').removeClass('is_prev').addClass('is_now');
+		$('.js_spmenu [data-position="'+targetPosition+'"].is_prev, .js_spmenu').css('height', targetMenuHeight);
+		$(this).data('target', targetPosition);
+		return false;
+	});
+
+
+	// Toggle SP menu
+
+
+	//2017/09/19追加 ここから
+	var ToggleXsMenu = function ToggleXsMenu() {
+		this.viewMode = null;
+	};
+	ToggleXsMenu.prototype.initialize = function () {
+		var _this = this;
+		_this.setViewMode();
+		$(window).on("orientationchange resize",function(){
+			_this.setViewMode();
+			if(_this.viewMode === "lg"){
+				_this.hideToggleNav();
+			}
+		});
+		$('#wrapper header .menu_area p a').on('click', function(e){
+
+			e.preventDefault();
+			if(!$(this).hasClass("is_toggled")){
+				$(this).addClass("is_toggled");
+				_this.showToggleNav();
+			}else{
+				$(this).removeClass("is_toggled");
+				_this.hideToggleNav();
+			}
+			var targetMenuHeight = 0;
+
+			if($('.js_spmenu [data-position][data-menu].is_now').length) {
+				$('.js_spmenu [data-position][data-menu].is_now > li').each(function(){
+					targetMenuHeight += $(this).outerHeight(true);
+				});
+				$('.js_spmenu [data-position][data-menu].is_now, .js_spmenu').css('height', targetMenuHeight);
+			} else {
+				$('.js_spmenu [data-position="1"][data-menu="1"] > li').each(function(){
+					targetMenuHeight += $(this).outerHeight(true);
+				});
+				$('.js_spmenu [data-position="1"][data-menu="1"], js_spmenu').css('height', targetMenuHeight);
+			}
+		});
+
+	};
+	ToggleXsMenu.prototype.setViewMode = function () {
+		var _this = this;
+		if($(window).width() > 768) {
+			_this.viewMode = "lg"
+		}else{
+			_this.viewMode = "xs"
+		}
+	};
+	ToggleXsMenu.prototype.showToggleNav = function () {
+		var _this = this;
+		$('#wrapper header .menu_area p a').html("閉じる");
+		$('body').addClass('is_locked');
+		$('#menu_open_area, .fixed_block, .js_spmenu__navbar').addClass('is_toggled');
+		$("#menu_open_area").show();
+		$(".fixed_block").show();
+		$(".js_spmenu__navbar").show();
+		$('body').append('<div class="js_overlay"></div>');
+
+	};
+	ToggleXsMenu.prototype.hideToggleNav = function () {
+		var _this = this;
+		$('#wrapper header .menu_area p a').removeClass("is_toggled");
+		$('#wrapper header .menu_area p a').html("メニュー");
+		$('body').removeClass('is_locked');
+		$('#menu_open_area, .fixed_block, .js_spmenu__navbar').removeClass('is_toggled');
+		$("#menu_open_area").hide();
+		$(".fixed_block").hide();
+		$(".js_spmenu__navbar").hide();
+		if($(".js_overlay").length){
+			$(".js_overlay").remove();
+		}
+	};
+
+
+	//蛻晄悄蛹�
+	var ToggleXsMenu = new ToggleXsMenu();
+	ToggleXsMenu.initialize();
+	//2017/09/19追加 まで
+
+
+
+
+
+
+
+
+
+
+
+
+	// Toggle sub menu for product detail pages
+	$('#product_menu_area dl dt a').on('click', function(){
+
+		$('#product_menu_area').toggleClass('is_toggled');
+		if( $('.js_modal').length ) {
+			$('.js_modal').fadeOut(function(){
+				$(this).remove();
+			});
+		} else {
+			$('body').append('<div class="js_modal"></div>');
+			$('.js_modal').fadeIn();
+		}
+		return false;
+	});
+
+
+	//2017/09/08追加 ここから
+	$(document).on("click", ".js_modal", function(){
+		$('#product_menu_area').toggleClass('is_toggled');
+		if( $('.js_modal').length ) {
+			$('.js_modal').fadeOut(function(){
+				$(this).remove();
+			});
+		}
+	});
+	//2017/09/08追加 ここまで
+
+
+
+	$(window).on('load', function(){
+		var $fixedHeader = $('#h_fixed_area');
+		var $fixedSubHeader = $('.detail_nav_area');
+		var relativeHeaderHeight = $('#wrapper header').outerHeight();
+		if($fixedSubHeader.offset()) var fixedSubHeaderOffsetTop = $fixedSubHeader.offset().top;
+
+
+		$(window).on('scroll', function(){
+			var windowScrollTop = $(window).scrollTop();
+
+			// Fixed header for top page
+			if(windowScrollTop > relativeHeaderHeight * 2) $fixedHeader.addClass('is_scrolled');
+			else $fixedHeader.removeClass('is_scrolled');
+
+			// Fixed header for product detail pages
+			if($fixedHeader.css('display') == 'none') {
+				if(windowScrollTop > fixedSubHeaderOffsetTop - relativeHeaderHeight) {
+					$fixedSubHeader.addClass('is_scrolled');
+					$('body').css('paddingTop', relativeHeaderHeight);
+				} else {
+					$fixedSubHeader.removeClass('is_scrolled');
+					$('body').css('paddingTop', 0);
+				}
+			} else {
+				if(windowScrollTop > fixedSubHeaderOffsetTop - $fixedHeader.outerHeight()) {
+					$fixedSubHeader.addClass('is_scrolled');
+					$('body').css('paddingTop', $fixedSubHeader.outerHeight());
+				} else {
+					$fixedSubHeader.removeClass('is_scrolled');
+					$('body').css('paddingTop', 0);
+				}
+			}
+
+		});
+	});
+});
+
+
+
+
+//2017/09/08追加 ここから
+
+var ResetPageScrollPos = function ResetPageScrollPos() {
+	this.lgHeaderHeight = 70;
+	this.xsHeaderHeight = 50;
+	this.lgDetailNavHeight = 59;
+	this.xsDetailNavHeight = 45;
+	this.viewMode = null;
+};
+ResetPageScrollPos.prototype.initialize = function () {
+	var _this = this;
+	var currentHeaderHeight;
+	$(window).on("load",function(){
+		_this.setViewMode();
+		var url = $(location).attr('href');
+		//urlに"#"が含まれる場合
+		if (url.indexOf("#") != -1) {
+			//詳細ナビがあるかどうか
+			if($(".detail_nav_area").length){
+				if(_this.viewMode === "lg"){
+					currentHeaderHeight = _this.lgHeaderHeight + _this.lgDetailNavHeight;
+				}else{
+					currentHeaderHeight = _this.xsHeaderHeight + _this.xsDetailNavHeight;
+				}
+			}else{
+				if(_this.viewMode === "lg"){
+					currentHeaderHeight = _this.lgHeaderHeight;
+				}else{
+					currentHeaderHeight = _this.xsHeaderHeight;
+				}
+			}
+			var id = url.split("#");
+			var $target = $('#' + id[id.length - 1]);
+			if ($target.length) {
+				setTimeout(function(){
+					var pos = $target.offset().top - currentHeaderHeight;
+					$("html, body").animate({ scrollTop: pos }, 1);
+				},1000);
+			}
+		}
+	});
+};
+ResetPageScrollPos.prototype.setViewMode = function () {
+	var _this = this;
+	if($(window).width() > 768) {
+		_this.viewMode = "lg"
+	}else{
+		_this.viewMode = "xs"
+	}
+};
+
+
+//蛻晄悄蛹�
+var resetPageScrollPos = new ResetPageScrollPos();
+resetPageScrollPos.initialize();
+
+
+//2017/09/08追加 ここまで

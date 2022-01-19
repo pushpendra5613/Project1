@@ -1,0 +1,5 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["ZmfDzgA"]); }
+
+__d("CometSinglePagePhotosRootQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="5217427144941198"}),null);
+__d("CometSinglePagePhotosRootQuery$Parameters",["CometSinglePagePhotosRootQuery_facebookRelayOperation"],(function(a,b,c,d,e,f){"use strict";a={kind:"PreloadableConcreteRequest",params:{id:b("CometSinglePagePhotosRootQuery_facebookRelayOperation"),metadata:{},name:"CometSinglePagePhotosRootQuery",operationKind:"query",text:null}};e.exports=a}),null);
+__d("CometSinglePagePhotosRoot.entrypoint",["CometSinglePagePhotosRootQuery$Parameters","JSResourceForInteraction","WebPixelRatio","buildCometSinglePageRoute.entrypoint"],(function(a,b,c,d,e,f,g){"use strict";a=c("buildCometSinglePageRoute.entrypoint")(c("JSResourceForInteraction")("CometSinglePagePhotosRoot.react").__setRef("CometSinglePagePhotosRoot.entrypoint"),function(a){a=a.routeProps.pageID;return{queries:{singlePagePhotosRootQueryReference:{parameters:b("CometSinglePagePhotosRootQuery$Parameters"),variables:{pageID:a,scale:d("WebPixelRatio").get()*4}}}}});g["default"]=a}),98);

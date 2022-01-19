@@ -1,0 +1,39 @@
+(function ($, window, undefined) {
+
+    "use strict";
+
+
+    /**************************************************
+     *
+     *	SetMvSlider
+     *	メインビジュアルスライダー
+     *
+     ***************************************************/
+    var SetMvSlider = function () {
+        this.$slider = $(".mv__slider");
+    };
+    SetMvSlider.prototype.initialize = function () {
+        var _this = this;
+        _this.$slider.slick({
+            autoplay:true,
+            autoplaySpeed:5000,
+            arrows:true,
+            dots:true,
+            pauseOnHover:false,
+            responsive: [{
+                breakpoint: 767,
+                settings: {
+                    arrows:false
+                }
+            }]
+        });
+    };
+
+    //初期化
+    var setMvSlider = new SetMvSlider();
+    setMvSlider.initialize();
+
+
+
+
+})(jQuery, window);

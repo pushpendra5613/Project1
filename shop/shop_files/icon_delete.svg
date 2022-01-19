@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+    <defs>
+        <style>
+            .cls-1{
+            fill:#fff;
+            }
+            .cls-2{
+            fill:none;
+            stroke:#a0a0a0;
+            stroke-width:2px;
+            }
+        </style>
+    </defs>
+    <title>icon_delete</title>
+    <g id="グループ化_202" data-name="グループ化 202">
+        <g id="楕円形_53" data-name="楕円形 53">
+            <circle class="cls-1" cx="17" cy="17" r="17"/>
+            <circle class="cls-2" cx="17" cy="17" r="16"/>
+        </g>
+        <line id="線_38" data-name="線 38" class="cls-2" x1="10.64" y1="10.64" x2="23.36" y2="23.36"/>
+        <line id="線_39" data-name="線 39" class="cls-2" x1="23.36" y1="10.64" x2="10.64" y2="23.36"/>
+    </g>
+</svg>

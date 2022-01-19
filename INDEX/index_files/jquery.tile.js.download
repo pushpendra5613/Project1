@@ -1,0 +1,69 @@
+$(window).on('load resize',function(){
+
+if (window.matchMedia('screen and (min-width:768px)').matches) {
+//768px以上のデスクトップでの処理 
+
+
+// 設定項目1：親要素名
+// 設定項目2：高さを合わせたい子要素名の配列。子要素同士で親子関係がある場合は、親を配列の後ろに置くこと。
+// 設定項目3：1行に並べる子要素数。全ての子要素を同じ高さにする場合は「0」を指定。
+AjustHeight(".col02_block", [".sup","h3",".num"], 4);
+AjustHeight(".generic_column01", ["li",".info_block",".wrap_column"], 2);
+AjustHeight(".generic_column01_rev", ["li",".info_block"], 2);
+AjustHeight(".generic_column02_1", ["li"], 2);
+AjustHeight(".generic_column02_1_rev", ["li"], 2);
+AjustHeight(".generic_column02_2", ["li"], 2);
+AjustHeight(".generic_column02_2_rev", ["li"], 2);
+AjustHeight(".generic_column03", ["li",".wrap_column"], 3);
+AjustHeight(".generic_column04", ["li",".wrap_column"], 4);
+	
+}else{
+//スクリーンサイズが768pxより小さい時の処理
+AjustHeight(".col02_block", [".sup","h3",".num"], 2);
+AjustHeight(".generic_column01", ["li",".info_block",".wrap_column"], 1);
+AjustHeight(".generic_column01_rev", ["li",".info_block"], 1);
+AjustHeight(".generic_column02_1", ["li"], 1);
+AjustHeight(".generic_column02_1_rev", ["li"], 1);
+AjustHeight(".generic_column02_2", ["li"], 1);
+AjustHeight(".generic_column02_2_rev", ["li"], 1);
+AjustHeight(".generic_column03", ["li",".wrap_column"], 1);
+AjustHeight(".generic_column04", ["li",".wrap_column"], 2);
+	
+}
+});
+
+
+/* childelemをnum個つずつ高さを合わせて並べるプログラム */
+function AjustHeight(element,childelem,num){
+	$(element).each(function(){
+		
+		var clen = childelem.length;
+		
+		for(var r=0;r<clen;r++){
+			var len;
+			if(num==0){
+				len = 1;
+				num = $(this).find(childelem[r]).length;
+			}else{
+				len = Math.floor($(this).find(childelem[r]).length/num)+1;
+			}
+			
+			
+			for(var i=0;i<len;i++){
+				var rep = 0;
+				for(var j=0;j<num;j++){
+					$(this).find(childelem[r]).eq(num*i+j).css("height","");
+					var itemHeight = parseInt($(this).find(childelem[r]).eq(num*i+j).css('height'));
+					if(itemHeight > rep){
+						rep = itemHeight;
+					};
+				}
+				for(var k=0;k<num;k++){
+					$(this).find(childelem[r]).eq(num*i+k).css("height",rep);
+				}
+			}
+		}
+	});
+}
+
+

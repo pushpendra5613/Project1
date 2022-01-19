@@ -1,0 +1,2990 @@
+@charset "UTF-8";
+
+/* Youtube */
+.l-video{
+  position:relative;
+  width:100%;
+  padding-top:56.25%;
+}
+.l-video iframe{
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+}
+
+/* map */
+.map_container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.map_container iframe,
+.map_container object,
+.map_container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Separator line */
+ .separator_line {
+   border-bottom: 3px solid #dadada;
+   margin-top: 50px;
+   padding-bottom: 50px;
+ }
+
+/* Synergy form */
+@media all and (min-width: 768px) {
+  .cms_synergy {
+    width: 1192px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .cms_synergy iframe{
+    width: 100% !important;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .generic_area {
+    width: 1192px;
+    margin: 60px auto 100px;
+  }
+  /* Youtube area*/
+  .l-youtube{
+    width:720px;
+    margin:0 auto;
+    padding:20px 0;
+  }
+  /* anchor*/
+  .detail_main_area a,
+  .block a,
+  .product_place_area a,
+  .generic_area a{
+	  color: #004DA3;
+	  text-decoration: underline;
+  }
+  .detail_main_area a:hover,
+  .block a:hover,
+  .product_place_area a:hover,
+  .generic_area a:hover{
+	  text-decoration: none;
+  }
+
+  /* anchor tel */
+  .detail_main_area a[href^="tel:"],
+  .block a[href^="tel:"],
+  .product_place_area a[href^="tel:"],
+  .generic_area a[href^="tel:"]{
+	  cursor: default;
+	  text-decoration: none;
+	  pointer-events: none;
+  }
+ 
+  /* no link */
+  .detail_main_area a[href="#"],
+  .block a[href="#"],
+  .product_place_area a[href="#"],
+  .generic_area a[href="#"]{
+	  cursor: default;
+	  text-decoration: none;
+	  pointer-events: none;
+  }
+ 
+  .detail_main_area b,
+  .block b,
+  .product_place_area b,
+  .generic_area b{
+	  color: #e10000;
+  }
+  /*汎用エリアここから*/
+  .mt0 {
+    margin-top: 0 !important;
+  }
+
+  .mt10 {
+    margin-top: 10px !important;
+  }
+
+  .mt20 {
+    margin-top: 20px !important;
+  }
+
+  .mt30 {
+    margin-top: 30px !important;
+  }
+
+  .mt40 {
+    margin-top: 0 !important;
+  }
+
+  .mb0 {
+    margin-bottom: 10px !important;
+  }
+
+  .mb10 {
+    margin-bottom: 10px !important;
+  }
+
+  .mb20 {
+    margin-bottom: 20px !important;
+  }
+
+  .mb30 {
+    margin-bottom: 30px !important;
+  }
+
+  .mb40 {
+    margin-bottom: 40px !important;
+  }
+
+  .ttl_lv01 {
+    font-size: 24px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    margin-top: 60px;
+  }
+  .ttl_lv01:first-child {
+    margin-top: 0;
+  }
+
+  .ttl_unique {
+   /* margin-top: 60px;*/
+  }
+  .ttl_unique:first-child {
+   /* margin-top: 40px;*/
+  }
+  .ttl_unique .ttl_point span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    padding: 6px 15px;
+    background-color: #ffb93e;
+    font-family: "FOT-セザンヌ Pro B";
+    font-family: "FOT-セザンヌ Pro B";
+    height: 44px;
+  }
+  .ttl_unique .ttl_txt {
+    font-size: 24px;
+    font-family: "FOT-セザンヌ Pro B";
+    margin-top: 15px;
+  }
+
+  .text_block {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .text_block p {
+    margin-top: 20px;
+  }
+  .text_block p:first-child {
+    margin-top: 0;
+  }
+  .text_block p.txt_small {
+    font-size: 14px;
+  }
+  .text_block p.text_indent {
+    text-indent: -1em;
+    margin-left: 1em;
+  }
+
+  .generic_column {
+    width: 1192px;
+    margin-top: 60px;
+  }
+  .generic_column {
+    width: 1192px;
+    margin-top: 60px;
+  }
+  /*.generic_column:first-child {
+    margin-top: 0;
+  }*/
+
+  .generic_column03 {
+    margin-left: -10px;
+    margin-right: -10px;
+    font-size: 0;
+  }
+  .generic_column03 li {
+    width: 384px;
+    margin: 40px 10px 0;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+  }
+
+  .link_btn01 {
+    /*width: 384px;*/
+    /*margin: 40px auto 0;*/
+	margin: 40px 0 0;
+    text-align: center;
+  }
+
+  .info_block .link_btn01 {
+    margin-top: 10px;
+  }
+  .info_block .link_btn01:first-child {
+    margin-top: 0;
+  }
+
+  .link_btn01 a {
+    background-color: #999;
+    /*display: block;*/
+	display: inline-block;
+    padding: 15px;
+    width: 384px;
+	margin:0 10px;
+    color: #fff;
+    font-size: 20px;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_right.png);
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+    background-position: right 10px center;
+	text-decoration: none;
+  }
+
+  .link_btn02 {
+    width: 100%;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+  .link_btn02 a {
+    background-color: #999;
+    display: block;
+    padding: 15px;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_right.png);
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+    background-position: right 10px center;
+	text-decoration: none;
+  }
+  .link_btn01 a:hover,
+  .link_btn02 a:hover {
+    color: #fff;
+	text-decoration: underline;
+  }
+  .ttl_lv02 {
+    border-left: 5px solid #004ea2;
+    padding: 0 0 0 15px;
+    vertical-align: middle;
+    font-size: 24px;
+    font-family: "FOT-セザンヌ Pro B";
+
+
+    /*margin-top: 60px;*/
+  }
+  .ttl_lv02:first-child {
+    /*margin-top: 40px;*/
+  }
+  .ttl_lv02 span {
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #f61b1b;
+    padding: 8px 8px;
+    color: #f61b1b;
+    border: 1px solid #f61b1b;
+    height: 40px;
+  }
+
+  .ttl_lv03 {
+    font-size: 20px;
+    font-family: "FOT-セザンヌ Pro B";
+    /*margin-top: 40px;*/
+  }
+
+  .generic_column02_1 {
+    overflow: hidden;
+  }
+  .generic_column02_1 li {
+    width: 782px;
+    float: left;
+    /*margin-top: 20px;*/
+  }
+  .generic_column02_1 li:nth-child(2n) {
+    width: 384px;
+    float: right;
+  }
+
+  .generic_column02_1_rev {
+    overflow: hidden;
+  }
+  .generic_column02_1_rev li {
+    width: 384px;
+    float: right;
+    /*margin-top: 20px;*/
+  }
+  .generic_column02_1_rev li:nth-child(2n) {
+    width: 782px;
+    float: left;
+  }
+
+  .generic_column02_2 {
+    overflow: hidden;
+  }
+  .generic_column02_2 li {
+    width: 384px;
+    float: left;
+    /*margin-top: 20px;*/
+  }
+  .generic_column02_2 li:nth-child(2n) {
+    width: 782px;
+    float: right;
+  }
+
+  .generic_column02_2_rev {
+    overflow: hidden;
+  }
+  .generic_column02_2_rev li {
+    width: 782px;
+    float: right;
+    /*margin-top: 20px;*/
+  }
+  .generic_column02_2_rev li:nth-child(2n) {
+    width: 384px;
+    float: left;
+  }
+
+  .width_all img {
+    width: 100%;
+  }
+
+  .generic_element_left {
+    text-align: left !important;
+  }
+
+  .generic_element_center {
+    text-align: center !important;
+  }
+
+  .generic_element_right {
+    text-align: right !important;
+  }
+  .generic_img_caption{
+	text-align: center;
+  }
+  .generic_img_caption_inner{
+	display: inline-block;
+	text-align: left;
+  }
+  .generic_column04 {
+    margin-left: -10px;
+    margin-right: -10px;
+    font-size: 0;
+    margin-top: 20px;
+  }
+  .generic_column04 li {
+    width: 283px;
+    margin: 20px 10px 0;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+  }
+
+  .generic_table {
+    border: 1px solid #d0dde9;
+    width: 100%;
+  }
+  .generic_table thead tr {
+    border-bottom: 1px solid #d0dde9;
+  }
+  .generic_table thead tr th {
+    background-color: #eff5fb;
+    font-size: 18px;
+    padding: 20px 25px;
+    border-left: 1px solid #d0dde9;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .generic_table thead tr th:first-child {
+    border-left: none;
+  }
+  .generic_table thead tr td {
+    background-color: #fff;
+    font-size: 16px;
+    padding: 20px 25px;
+    border-left: 1px solid #d0dde9;
+  }
+  .generic_table tbody tr {
+    border-top: 1px solid #d0dde9;
+  }
+  .generic_table tbody tr:first-child {
+    border-top: none;
+  }
+  .generic_table tbody tr th {
+    background-color: #eff5fb;
+    font-size: 18px;
+    padding: 20px 25px;
+    border-left: 1px solid #d0dde9;
+    font-family: "FOT-セザンヌ Pro B";
+	width: 25%;
+  }
+  .generic_table tbody tr th:first-child {
+    border-left: none;
+  }
+  .generic_table tbody tr td {
+    background-color: #fff;
+    font-size: 16px;
+    padding: 20px 25px;
+    border-left: 1px solid #d0dde9;
+  }
+
+  .generic_column01 {
+  /*  margin-top: 20px;*/
+    overflow: hidden;
+  }
+  .generic_column01 li {
+    width: 586px;
+    float: left;
+  /*  margin-top: 20px;*/
+  }
+  .generic_column01 li:nth-child(2n) {
+    float: right;
+  }
+
+  .generic_column01_rev {
+  /*  margin-top: 20px;*/
+    overflow: hidden;
+  }
+  .generic_column01_rev li {
+    width: 586px;
+    float: right;
+  /*  margin-top: 20px;*/
+  }
+  .generic_column01_rev li:nth-child(2n) {
+    float: left;
+  }
+  /* default margin setting */
+  .generic_column,
+  .generic_column01,
+  .generic_column01_rev,
+  .generic_column02_2,
+  .generic_column02_2_rev,
+  .generic_column02_1,
+  .generic_column02_1_rev {
+    margin-top: 60px;
+  }
+  .generic_column .generic_column,
+  .generic_column .generic_column01,
+  .generic_column .generic_column01_rev,
+  .generic_column .generic_column02_2,
+  .generic_column .generic_column02_2_rev,
+  .generic_column .generic_column02_1,
+  .generic_column .generic_column02_1_rev {
+    margin-top: 30px;
+  }
+  /* generic_column03 setting */
+  .generic_column03 .ttl_lv02,
+  .generic_column03 .ttl_lv03,
+  .generic_column03 .text_block{
+    padding: 0 15px;
+  }
+  /* generic_column03 wrap_column setting */
+  .generic_column03 .wrap_column .ttl_lv02,
+  .generic_column03 .wrap_column .ttl_lv03,
+  .generic_column03 .wrap_column .text_block{
+    padding: 0;
+  }
+
+  .generic_column03 .ttl_lv02,
+  .generic_column03 .ttl_lv03{
+    margin-top: 15px;
+  }
+  .generic_column03 .text_block{
+    margin-top: 15px;
+  }
+  /* generic_column04 setting */
+  .generic_column04 .ttl_lv02,
+  .generic_column04 .ttl_lv03,
+  .generic_column04 .text_block{
+    padding: 0 15px;
+  }
+  /* generic_column04 wrap_column setting */
+  .generic_column04 .wrap_column .ttl_lv02,
+  .generic_column04 .wrap_column .ttl_lv03,
+  .generic_column04 .wrap_column .text_block{
+    padding: 0;
+  }
+  .generic_column04 .ttl_lv02,
+  .generic_column04 .ttl_lv03{
+    margin-top: 15px;
+  }
+  .generic_column04 .text_block{
+    margin-top: 15px;
+  }
+  /* faq inline width setting */
+  .p-faqs__holder__faqList__item .generic_column{
+	width: 100%;
+  }
+
+  /* ttl03 margin setting */
+  .ttl_lv03{
+	margin-top: 30px;
+  }
+  .generic_column01 .ttl_lv03:first-child,
+  .generic_column01_rev .ttl_lv03:first-child,
+  .generic_column02_2 .ttl_lv03:first-child,
+  .generic_column02_2_rev .ttl_lv03:first-child,
+  .generic_column02_1 .ttl_lv03:first-child,
+  .generic_column02_1_rev .ttl_lv03:first-child,
+  .generic_column .generic_column .ttl_lv03:first-child,
+  .generic_column .generic_column01 .ttl_lv03:first-child,
+  .generic_column .generic_column01_rev .ttl_lv03:first-child,
+  .generic_column .generic_column02_2 .ttl_lv03:first-child,
+  .generic_column .generic_column02_2_rev .ttl_lv03:first-child,
+  .generic_column .generic_column02_1 .ttl_lv03:first-child,
+  .generic_column .generic_column02_1_rev .ttl_lv03:first-child {
+    margin-top: 0;
+  }
+  .col02_block li a {
+    display: block;
+    background-color: #fff;
+	color: #202020;
+	text-decoration: none;
+  }
+  .col02_block li a p.btn{
+	color: #fff;
+  }
+  .col02_block li a .img {
+    width: 100%;
+  }
+  .col02_block li a .text_block {
+    padding: 10px 20px 30px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .col02_block li a .text_block .sup {
+    font-size: 14px;
+    position: relative;
+  }
+  .col02_block li a .text_block .sup:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #202020;
+    width: 20px;
+    height: 1px;
+  }
+  .col02_block li a .text_block h3 {
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro B";
+    margin-top: 30px;
+  }
+  .col02_block li a .text_block h3:first-child {
+    margin-top: 0;
+  }
+  .col02_block li a .text_block h3 span {
+    display: block;
+    font-size: 14px;
+    font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  }
+  .col02_block li a .text_block .num {
+    margin-top: 15px;
+  }
+  .col02_block li a .btn {
+    padding: 12px 20px;
+    text-align: center;
+    width: 283px;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro M";
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_white.png);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-color: #999;
+  }
+
+  .h_blue {
+    background-color: #004ea2;
+    color: #fff;
+    text-align: center;
+    font-family: "FOT-セザンヌ Pro B";
+    padding: 15px 20px;
+    font-size: 20px;
+  }
+
+  .info_block {
+    background-color: #fff;
+    padding: 30px;
+  }
+  .info_block .ttl_blue {
+    font-size: 36px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    text-align: center;
+    margin: 10px auto 40px;
+  }
+
+  .article_block {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .article_block tbody tr {
+    border-bottom: 1px solid #dadada;
+  }
+  .article_block tbody tr .date {
+    vertical-align: middle;
+    padding: 18px 20px 18px 0;
+    width: 140px;
+  }
+  .article_block tbody tr .category {
+    vertical-align: middle;
+    padding: 12px 20px 12px 0;
+    text-align: center;
+    width: 180px;
+  }
+  .article_block tbody tr .category a {
+    width: 160px;
+    display: block;
+    padding: 1px 10px;
+    font-size: 12px;
+    background-color: #fff;
+    font-family: "FOT-セザンヌ Pro B";
+    color: #004ea2;
+  }
+  .article_block tbody tr .category a.info {
+    color: #f48400;
+  }
+  .article_block tbody tr .category a.media {
+    color: #01b6bd;
+  }
+  .article_block tbody tr td {
+    vertical-align: middle;
+    padding: 18px 0;
+  }
+  .article_block tbody tr td a {
+    color: #004ea2;
+    text-decoration: underline;
+  }
+  .article_block tbody tr td a:hover {
+    text-decoration: none;
+  }
+
+  .wrap_column {
+    background-color: #fff;
+    padding: 25px 30px;
+  }
+  .wrap_column .line_bottom {
+    font-size: 20px;
+    font-family: "FOT-セザンヌ Pro B";
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .wrap_column .line_bottom:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #202020;
+    width: 20px;
+    height: 1px;
+  }
+
+  /*汎用エリアここまで*/
+  .blue_link {
+    color: #004ea2;
+    text-decoration: underline;
+  }
+  .blue_link:hover {
+    text-decoration: none;
+  }
+
+  .red {
+    color: #e10000;
+  }
+  .glay {
+    color:#999999;
+  }
+
+  .mv_area {
+    width: 1192px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: table;
+  }
+  .mv_area .txt_block {
+    background-color: #004ea2;
+    color: #fff;
+    display: table-cell;
+    width: 384px;
+    height: 355px;
+    font-size: 14px;
+    vertical-align: middle;
+    padding-left: 50px;
+  }
+  .mv_area .txt_block p {
+    font-family: "FOT-セザンヌ Pro B";
+    position: relative;
+  }
+  .mv_area .txt_block p:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #fff;
+    width: 20px;
+    height: 1px;
+  }
+  .mv_area .txt_block h2 {
+    font-size: 24px;
+    padding-top: 30px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .mv_area .img_block {
+    display: table-cell;
+    width: 808px;
+    height: 355px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+
+  .pankuzu {
+    width: 1192px;
+    margin: 12px auto;
+  }
+  .pankuzu a:hover{
+    text-decoration: underline;
+  }
+  .pankuzu ul {
+    font-size: 0;
+  }
+  .pankuzu ul li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  .pankuzu ul li:before {
+    content: '>';
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .pankuzu ul li:first-child {
+    margin-left: 0;
+  }
+  .pankuzu ul li:first-child:before {
+    content: '';
+    margin-right: 0;
+  }
+
+  .box_area .col01_block {
+    width: 1192px;
+    margin: 0 auto;
+    font-size: 0;
+  }
+  .box_area .col01_block li {
+    display: inline-block;
+    width: 586px;
+    height: 290px;
+    margin-top: 20px;
+    background-color: #fff;
+    margin-left: 20px;
+  }
+  .box_area .col01_block li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  .box_area .col01_block li a {
+    display: block;
+  }
+  .box_area .col01_block li a .img {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    width: 290px;
+  }
+  .box_area .col01_block li a .img img {
+    width: 100%;
+  }
+  .box_area .col01_block li a .txt_block {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    width: 296px;
+    padding: 40px 25px 25px 36px;
+    position: relative;
+    height: 290px;
+  }
+  .box_area .col01_block li a .txt_block h3 {
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro B";
+    position: relative;
+
+  }
+  .box_area .col01_block li a .txt_block h3:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #202020;
+    width: 20px;
+    height: 1px;
+  }
+  .box_area .col01_block li a .txt_block .txt {
+    margin-top: 30px;
+  }
+  .box_area .col01_block li a .txt_block .txt p {
+    font-size: 14px;
+  }
+  .box_area .col01_block li a .txt_block .btn {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    padding: 12px 0;
+    text-align: center;
+    width: 235px;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro M";
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_white.png);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-color: #999;
+  }
+  .box_area .col01_block li a:hover .txt_block .btn {
+	text-decoration: underline;
+  }
+
+  .linkbtn_area {
+    width: 1192px;
+    margin: 70px auto;
+  }
+  .linkbtn_area h2 {
+    font-size: 24px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+  }
+  .linkbtn_area ul {
+    font-size: 0;
+    margin-top: 10px;
+  }
+  .linkbtn_area ul li {
+    display: inline-block;
+    width: 384px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .linkbtn_area ul li:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  .linkbtn_area ul li a {
+    border: 1px solid #d0dae5;
+    font-size: 18px;
+    padding: 30px 30px 30px 100px;
+    background-position: 28px;
+    display: block;
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+  .linkbtn_area ul li a:hover {
+    text-decoration: underline;
+  }
+  .linkbtn_area ul li .book {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_book.png);
+  }
+  .linkbtn_area ul li .file {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_file.png);
+  }
+  .linkbtn_area ul li .point {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_guide.png);
+  }
+  .linkbtn_area ul li .mail {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_point.png);
+  }
+  .linkbtn_area ul li .message {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_message.png);
+  }
+  .linkbtn_area ul li .repair {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_repair.png);
+  }
+
+  .free_bnr_area {
+    width: 1192px;
+    margin: 60px auto 0;
+  }
+  .free_bnr_area ul {
+    font-size: 0;
+  }
+  .free_bnr_area ul li {
+    display: inline-block;
+    font-size: 14px;
+    width: 384px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .free_bnr_area ul li:nth-child(3n-2) {
+    margin-left: 0;
+  }
+  .free_bnr_area ul li a img {
+    width: 100%;
+  }
+
+  .box_area {
+    width: 1192px;
+    margin: 60px auto 0;
+  }
+  .box_area h2 {
+    font-size: 24px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    margin-top: 60px;
+  }
+  .box_area .col02_block {
+    font-size: 0;
+    margin-top: -20px;
+  }
+  .box_area .col02_block li {
+    display: inline-block;
+    vertical-align: top;
+    width: 283px;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+  .box_area .col02_block li:nth-child(4n+1) {
+    margin-left: 0;
+  }
+  .box_area .col02_block li a {
+    display: block;
+    background-color: #fff;
+  }
+  .box_area .col02_block li a.new {
+    position: relative;
+    font-size: 12px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .box_area .col02_block li a.new:after {
+    content: '新商品';
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px 10px;
+    background-color: #ffb93e;
+  }
+  .box_area .col02_block li a .img {
+    width: 283px;
+  }
+  .box_area .col02_block li a .img img {
+    width: 100%;
+  }
+  .box_area .col02_block li a .txt_block {
+    padding: 10px 20px 30px;
+  }
+  .box_area .col02_block li a .txt_block .sup {
+    font-size: 14px;
+    position: relative;
+  }
+  .box_area .col02_block li a .txt_block .sup:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #202020;
+    width: 20px;
+    height: 1px;
+  }
+  .box_area .col02_block li a .txt_block h3 {
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro B";
+    margin-top: 30px;
+  }
+  .box_area .col02_block li a .txt_block h3 span {
+    display: block;
+    font-size: 14px;
+    font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  }
+  .box_area .col02_block li a .txt_block .num {
+    margin-top: 15px;
+  }
+  .box_area .col02_block li a .btn {
+    padding: 12px 20px;
+    text-align: center;
+    width: 283px;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro M";
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_white.png);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-color: #999;
+  }
+  .box_area .col02_block li a:hover .btn {
+    text-decoration: underline;
+  }
+  .box_area .accordion {
+    margin-top: 70px;
+  }
+  .box_area .accordion dt {
+    background-color: #004ea2;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-family: '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+	font-weight: bold;
+    padding: 20px;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_close.png);
+    background-size: 19px 11px;
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+  }
+  .box_area .accordion dt.open {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_open.png);
+  }
+  .box_area .accordion dd {
+    display: none;
+  }
+  .box_area .sub_txt {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  .box_area .col03_block {
+    font-size: 0;
+    margin-top: 40px;
+  }
+  .box_area .col03_block li {
+    width: 384px;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 20px;
+    background-color: #fff;
+  }
+  .box_area .col03_block li:first-child {
+    margin-left: 0;
+  }
+  .box_area .col03_block li a {
+    display: block;
+  }
+  .box_area .col03_block li a .img {
+    width: 100%;
+  }
+  .box_area .col03_block li a .img img {
+    width: 100%;
+  }
+  .box_area .col03_block li a .txt_block {
+    padding: 20px 15px;
+  }
+  .box_area .col03_block li a .txt_block h3 {
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro B";
+    position: relative;
+  }
+  .box_area .col03_block li a .txt_block h3:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-color: #202020;
+    width: 20px;
+    height: 1px;
+  }
+  .box_area .col03_block li a .txt_block p {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  .box_area .col03_block li a .btn {
+    padding: 12px 20px;
+    text-align: center;
+    width: 384px;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro M";
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_white.png);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-color: #999;
+  }
+
+  .big_bnr_area {
+    background-color: #fff;
+    margin-top: 60px;
+  }
+  .big_bnr_area ul {
+    padding: 50px 0;
+    text-align: center;
+    font-size: 0;
+  }
+  .big_bnr_area ul li {
+    display: inline-block;
+    width: 384px;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  .big_bnr_area ul li:first-child {
+    margin-left: 0;
+  }
+  .big_bnr_area ul li a img {
+    width: 100%;
+  }
+
+  .fin_bnr_area {
+    width: 1192px;
+    margin: 60px auto 0;
+  }
+  .fin_bnr_area ul {
+    font-size: 0;
+    text-align: center;
+  }
+  .fin_bnr_area ul li {
+    display: inline-block;
+    font-size: 14px;
+    width: 384px;
+    margin-left: 20px;
+  }
+  .fin_bnr_area ul li:first-child {
+    margin-left: 0;
+  }
+  .fin_bnr_area ul li a img {
+    width: 100%;
+  }
+
+  .detail_mv_area {
+    width: 1192px;
+    margin: 0 auto;
+  }
+  .detail_mv_area .img_block p img {
+    width: 100%;
+  }
+
+  .product_place_area {
+    font-size: 0;
+    width: 1192px;
+    margin: 60px auto 40px;
+  }
+  .product_place_area .detail_block {
+    display: inline-block;
+    vertical-align: middle;
+    width: 700px;
+  }
+  .product_place_area .detail_block .sub_ttl {
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: "FOT-セザンヌ Pro B";
+	line-height: 1.3;
+  }
+  .product_place_area .detail_block .logo {
+    width: 300px;
+    margin-top: 15px;
+  }
+  .product_place_area .detail_block .logo img {
+    width: 100%;
+  }
+  .product_place_area .detail_block h2 {
+    font-size: 22px;
+    margin-top: 18px;
+    font-family: "FOT-セザンヌ Pro B";
+	line-height: 1.3;
+  }
+  .product_place_area .detail_block .txt_block {
+    font-size: 14px;
+    margin-top: 14px;
+  }
+  .product_place_area .detail_block .txt_block p {
+    margin-top: 15px;
+  }
+  .product_place_area .detail_block .txt_block p:first-child {
+    margin-top: 0;
+  }
+  .product_place_area .img_block {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    width: 334px;
+  }
+  .product_place_area .img_block p img {
+    width: 100%;
+  }
+  .product_place_area .link_btn01{
+	text-align: left;
+	margin: 15px 0 0 3px;
+  }
+  .product_place_area .link_btn01 a{
+	width: 180px;
+	padding: 5px 15px;
+	font-size: 17px;
+	margin: 0;
+  }
+
+  .detail_nav_area {
+    background-color: #f4f4f4;
+    right: 0;
+    left: 0;
+  }
+  .detail_nav_area ul {
+    font-size: 0;
+    text-align: center;
+	width: 1192px;
+    margin: 0 auto;
+  }
+  .detail_nav_area ul li {
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    border-top: 1px solid #d0dae5;
+    border-bottom: 1px solid #d0dae5;
+    border-right: 1px solid #d0dae5;
+  }
+  .detail_nav_area ul li:first-child {
+    border-left: 1px solid #d0dae5;
+  }
+  .detail_nav_area ul li a {
+    width: 296px;
+    font-size: 16px;
+    padding: 16px 20px;
+    background-color: #fff;
+    display: block;
+  }
+  .detail_nav_area ul li a.active {
+    background-color: #004ea2;
+    color: #fff;
+  }
+
+  .detail_main_area {
+    background-color: #fff;
+    padding-bottom: 60px;
+  }
+  .detail_main_area .lower {
+    width: 1192px;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+  .detail_main_area .lower:first-child {
+    padding-top: 30px;
+  }
+  .detail_main_area .lower h2 {
+    font-size: 24px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    margin-top: 60px;
+  }
+  .detail_main_area .lower h2:first-child {
+    margin-top: 0;
+  }
+  .detail_main_area .lower .block {
+    margin-top: 60px;
+  }
+  .detail_main_area .lower .block:first-of-type {
+    margin-top: 40px;
+  }
+  .detail_main_area .lower .block .ttl {
+    font-size: 0;
+  }
+  .detail_main_area .lower .block .ttl strong {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    padding: 6px 15px;
+    background-color: #ffb93e;
+    font-family: "FOT-セザンヌ Pro B";
+    height: 44px;
+  }
+  .detail_main_area .lower .block .ttl span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    color: #f61b1b;
+    padding: 10px 6px;
+    color: #f61b1b;
+    border: 1px solid #f61b1b;
+    height: 44px;
+  }
+  .detail_main_area .lower .block h3 {
+    font-size: 24px;
+    font-family: "FOT-セザンヌ Pro B";
+    margin-top: 15px;
+  }
+  .detail_main_area .lower .block h3.h_ttl {
+    border-left: 5px solid #004ea2;
+    padding: 0 0 0 15px;
+    vertical-align: middle;
+  }
+  .detail_main_area .lower .block h3.h_ttl span {
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 8px 8px;
+    color: #f61b1b;
+    border: 1px solid #f61b1b;
+    height: 40px;
+  }
+  .detail_main_area .lower .block h3.h_ttl strong {
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .detail_main_area .lower .block h3.h_ttl sup {
+    font-size: 14px;
+    vertical-align: top;
+    position: relative;
+  }
+  .detail_main_area .lower .block .col2_block {
+    font-size: 0;
+    margin-top: 20px;
+  }
+  .detail_main_area .lower .block .col2_block .right_txt {
+    display: inline-block;
+    vertical-align: top;
+    width: 782px;
+    font-size: 18px;
+  }
+  .detail_main_area .lower .block .col2_block .right_txt p {
+    margin-top: 20px;
+  }
+  .detail_main_area .lower .block .col2_block .right_txt p:first-child {
+    margin-top: 0;
+  }
+  .detail_main_area .lower .block .col2_block .left_img {
+    display: inline-block;
+    vertical-align: top;
+    width: 384px;
+    margin-left: 20px;
+  }
+  .detail_main_area .lower .block .col2_block .left_img p img {
+    width: 100%;
+  }
+  .detail_main_area .lower .block .txt_block {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .detail_main_area .lower .block .txt_block p {
+    margin-top: 20px;
+  }
+  .detail_main_area .lower .block .txt_block p:first-child {
+    margin-top: 0;
+  }
+  .detail_main_area .lower .block .txt_block p sup {
+    font-size: 10px;
+    vertical-align: top;
+    position: relative;
+  }
+  .detail_main_area .lower .block .img {
+    text-align: center;
+    margin-top: 25px;
+  }
+  .detail_main_area .lower .block .caution {
+    font-size: 12px;
+    color: #999;
+    margin-top: 25px;
+
+  }
+  .detail_main_area .lower .block .btn {
+    width: 384px;
+    margin: 30px auto 0;
+    text-align: center;
+  }
+  .detail_main_area .lower .block .btn a {
+    background-color: #999;
+    display: block;
+    padding: 15px;
+    width: 384px;
+    color: #fff;
+    font-size: 20px;
+
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_right.png);
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+    background-position: right 10px center;
+	text-decoration: none;
+  }
+  .detail_main_area .lower .block .item {
+    margin-top: 5px;
+    font-size: 0;
+  }
+  .detail_main_area .lower .block .item li {
+    margin-right: 20px;
+    display: inline-block;
+    color: #e74c3c;
+    font-size: 16px;
+    background-color: #fff3f3;
+    padding: 7px 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+  .detail_main_area .lower .block .item li:first-child {
+    margin-left: 0;
+  }
+  .detail_main_area .lower .block table {
+    width: 100%;
+    margin-top: -20px;
+    margin-bottom: 40px;
+  }
+  .detail_main_area .lower .block table tbody tr {
+    border-bottom: 1px solid #d0dde9;
+    font-size: 16px;
+  }
+  .detail_main_area .lower .block table tbody tr th {
+    width: 280px;
+    padding: 12px 20px 12px 0;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .detail_main_area .lower .block table tbody tr td {
+    padding: 12px 20px 12px 0;
+  }
+
+  .model_area {
+    margin: 40px auto 0;
+    width: 1192px;
+  }
+  .model_area h2 {
+    color: #e74c3c;
+    font-size: 16px;
+  }
+  .model_area ul {
+    margin-top: 15px;
+  }
+
+  .bt_bnr_area {
+    background-color: #fff;
+  }
+  .bt_bnr_area .lower {
+    width: 1192px;
+    margin: 0 auto;
+    padding: 60px 0 55px;
+  }
+  .bt_bnr_area .lower ul {
+    font-size: 0;
+    margin-top: -20px;
+  }
+  .bt_bnr_area .lower ul li {
+    display: inline-block;
+    width: 283px;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .bt_bnr_area .lower ul li:nth-child(4n+1) {
+    margin-left: 0;
+  }
+  .bt_bnr_area .lower ul li a img {
+    width: 100%;
+  }
+  .bt_bnr_area .lower .hit_block {
+    margin-top: 20px;
+  }
+  .bt_bnr_area .lower .hit_block p {
+    margin-top: 7px;
+  }
+  .bt_bnr_area .lower .hit_block p:first-child {
+    margin-top: 0;
+  }
+  .bt_bnr_area .lower .hit_block p a {
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_hit.png) no-repeat;
+
+    background-size: 20px 20px;
+    background-position: left top;
+    padding-left: 28px;
+    display: block;
+  }
+
+  .product_simple_area {
+    width: 1192px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .product_simple_area .txt_block {
+    float: left;
+    width: 700px;
+    font-size: 22px;
+  }
+  .product_simple_area .txt_block .lower {
+    width: 700px;
+    height: 334px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .product_simple_area .txt_block .lower .logo {
+    width: 283px;
+  }
+  .product_simple_area .txt_block .lower .logo img {
+    width: 100%;
+  }
+  .product_simple_area .txt_block .lower .ttl {
+    margin-top: 20px;
+    font-size: 22px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .product_simple_area .img_block {
+    margin-right: 50px;
+    margin-left: 20px;
+    float: right;
+    vertical-align: middle;
+    width: 334px;
+    height: 334px;
+  }
+  .product_simple_area .img_block p img {
+    width: 100%;
+  }
+
+  /*============================
+  #product_menu_area
+  ============================*/
+  #product_menu_area {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  #product_menu_area dl {
+    font-size: 0;
+  }
+  #product_menu_area dl dt {
+    display: inline-block;
+    margin-top: 130px;
+    background-color: #fff;
+  }
+  #product_menu_area dl dt a {
+    display: block;
+    vertical-align: top;
+    width: 50px;
+    height: 180px;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\product_menu.png);
+    background-repeat: no-repeat;
+    background-size: 20px 10px;
+    background-position: center top 30px;
+    background-color: #004ea2;
+    color: #fff;
+    font-size: 16px;
+    padding: 17px;
+    line-height: 1;
+    letter-spacing:0.2em;
+    padding-top: 60px;
+    -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  }
+  #product_menu_area dl dd {
+    vertical-align: top;
+    display: inline-block;
+    background-color: #fff;
+    padding: 40px 35px 40px 20px;
+    width: 430px;
+    height: 100vh;
+  }
+
+  #product_menu_area dl dd .lower {
+    overflow-y: auto;
+    height: 100%;
+  }
+  #product_menu_area dl dd .lower::-webkit-scrollbar {
+    width: 8px;
+  }
+  #product_menu_area dl dd .lower::-webkit-scrollbar-track {
+    background: #e6e6e6;
+  }
+  #product_menu_area dl dd .lower::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+  }
+  #product_menu_area dl dd .lower .first {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 16px 0 15px 20px;
+  }
+  #product_menu_area dl dd .lower .first a.active {
+    color: #004ea2;
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_product.png) no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    margin-left: -20px;
+  }
+  #product_menu_area dl dd .lower .second {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 14px 0 10px 30px;
+    padding-right: 20px;
+  }
+  #product_menu_area dl dd .lower .second a.active {
+    color: #004ea2;
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_product.png) no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    margin-left: -20px;
+  }
+  #product_menu_area dl dd .lower .third {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 14px 0 10px 50px;
+    padding-right: 20px;
+  }
+  #product_menu_area dl dd .lower .third a.active {
+    color: #004ea2;
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_product.png) no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    margin-left: -20px;
+  }
+  #product_menu_area dl dd .lower .first a:hover,
+  #product_menu_area dl dd .lower .second a:hover,
+  #product_menu_area dl dd .lower .third a:hover {
+    text-decoration: underline;
+	color: #004DA3;
+  }
+}
+@media all and (max-width: 767px) {
+  .generic_area {
+    margin: 30px 10px 50px;
+  }
+
+  /* Youtube area*/
+  .l-youtube{
+    padding:20px 0;
+  }
+  .detail_main_area a,
+  .block a,
+  .product_place_area a,
+  .generic_area a{
+	  color: #004DA3;
+	  text-decoration: underline;
+  }
+  .detail_main_area a:hover,
+  .block a:hover,
+  .product_place_area a:hover,
+  .generic_area a:hover{
+	  text-decoration: none;
+  }
+
+  /* no link */
+  .detail_main_area a[href="#"],
+  .block a[href="#"],
+  .product_place_area a[href="#"],
+  .generic_area a[href="#"]{
+	  cursor: default;
+	  text-decoration: none;
+	  pointer-events: none;
+  }
+
+  .detail_main_area b,
+  .block b,
+  .product_place_area b,
+  .generic_area b{
+	  color: #e10000;
+  }
+  /*汎用エリアここから*/
+  .mt0 {
+    margin-top: 0 !important;
+  }
+
+  .mt10 {
+    margin-top: 10px !important;
+  }
+
+  .mt20 {
+    margin-top: 20px !important;
+  }
+
+  .mt30 {
+    margin-top: 30px !important;
+  }
+
+  .mt40 {
+    margin-top: 0 !important;
+  }
+
+  .mb0 {
+    margin-bottom: 10px !important;
+  }
+
+  .mb10 {
+    margin-bottom: 10px !important;
+  }
+
+  .mb20 {
+    margin-bottom: 20px !important;
+  }
+
+  .mb30 {
+    margin-bottom: 30px !important;
+  }
+
+  .mb40 {
+    margin-bottom: 40px !important;
+  }
+
+  .ttl_lv01 {
+    font-size: 17px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    margin-top: 30px;
+  }
+  .ttl_lv01:first-child {
+    margin-top: 0;
+  }
+
+  .ttl_unique {
+   /* margin-top: 40px;*/
+  }
+  .ttl_unique:first-child {
+    /*margin-top: 25px;*/
+  }
+  .ttl_unique .ttl_point span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    padding: 3px 15px;
+    background-color: #ffb93e;
+    font-family: "FOT-セザンヌ Pro B";
+    height: 30px;
+  }
+  .ttl_unique .ttl_txt {
+    font-size: 17px;
+    font-family: "FOT-セザンヌ Pro B";
+    margin-top: 12px;
+    line-height: 1.3;
+  }
+
+  .text_block {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  .text_block p {
+    margin-top: 15px;
+  }
+  .text_block p:first-child {
+    margin-top: 0;
+  }
+  .text_block p.txt_small {
+    font-size: 12px;
+  }
+  .text_block p.text_indent {
+    text-indent: -1em;
+    margin-left: 1em;
+  }
+
+  .generic_column {
+    margin-top: 40px;
+  }
+  .generic_column:first-child {
+    margin-top: 0;
+  }
+
+  .generic_column03 li {
+    width: 100%;
+    margin: 30px 0 0;
+  }
+
+  .link_btn01 {
+    width: 100%;
+    margin: 15px 0 0;
+    text-align: center;
+  }
+  .link_btn01 a {
+    background-color: #999;
+    display: block;
+    margin-top: 15px;
+    padding: 12px 15px;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_right.png);
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+    background-position: right 7px center;
+	text-decoration: none;
+  }
+  .link_btn01 a:first-child{
+    margin-top: 0;
+  }
+  .link_btn02 {
+    width: 100%;
+    margin: 15px 0 0;
+    text-align: center;
+  }
+  .link_btn02 a {
+    background-color: #999;
+    display: block;
+    padding: 12px 15px;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_right.png);
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+    background-position: right 7px center;
+	text-decoration: none;
+  }
+  .link_btn01 a:hover,
+  .link_btn02 a:hover {
+    color: #fff;
+  }
+  .ttl_lv02 {
+    border-left: 5px solid #004ea2;
+    padding: 0 0 0 8px;
+    vertical-align: middle;
+    font-size: 17px;
+    font-family: "FOT-セザンヌ Pro B";
+    /*margin-top: 40px;*/
+    line-height: 1.3;
+  }
+  .ttl_lv02:first-child {
+    /*margin-top: 25px;*/
+  }
+  .ttl_lv02 span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 9px;
+    padding: 8px 8px;
+    color: #f61b1b;
+    border: 1px solid #f61b1b;
+    margin-bottom: 4px;
+  }
+
+  .ttl_lv03 {
+    font-size: 16px;
+    font-family: "FOT-セザンヌ Pro B";
+    /*margin-top: 20px;*/
+  }
+
+  .generic_column02_1 li {
+    margin-top: 20px;
+  }
+
+  .generic_column02_1_rev li {
+    margin-top: 20px;
+  }
+
+  .generic_column02_2 li {
+    margin-top: 20px;
+  }
+
+  .generic_column02_2_rev li {
+    margin-top: 20px;
+  }
+  /* ttl03 margin setting */
+  .ttl_lv03{
+	margin-top: 20px;
+  }
+  .generic_column01 .ttl_lv03:first-child,
+  .generic_column01_rev .ttl_lv03:first-child,
+  .generic_column02_2 .ttl_lv03:first-child,
+  .generic_column02_2_rev .ttl_lv03:first-child,
+  .generic_column02_1 .ttl_lv03:first-child,
+  .generic_column02_1_rev .ttl_lv03:first-child,
+  .generic_column .generic_column .ttl_lv03:first-child,
+  .generic_column .generic_column01 .ttl_lv03:first-child,
+  .generic_column .generic_column01_rev .ttl_lv03:first-child,
+  .generic_column .generic_column02_2 .ttl_lv03:first-child,
+  .generic_column .generic_column02_2_rev .ttl_lv03:first-child,
+  .generic_column .generic_column02_1 .ttl_lv03:first-child,
+  .generic_column .generic_column02_1_rev .ttl_lv03:first-child {
+    margin-top: 0;
+  }
+  /* generic_column03 setting */
+  .generic_column03 .ttl_lv02,
+  .generic_column03 .ttl_lv03{
+    margin-top: 12px;
+  }
+
+
+  .width_all img {
+    width: 100%;
+  }
+
+  .generic_element_left {
+    text-align: left;
+  }
+  .generic_element_left img {
+    max-width: 100%;
+  }
+
+  .generic_element_center {
+    text-align: center;
+  }
+  .generic_element_center img {
+    max-width: 100%;
+  }
+
+  .generic_element_right {
+    text-align: right;
+  }
+  .generic_element_right img {
+    max-width: 100%;
+  }
+
+  .generic_column04 {
+    margin-left: -1.5%;
+    margin-right: -1.5%;
+    font-size: 0;
+    margin-top: 20px;
+  }
+  .generic_column04 li {
+    width: 47%;
+    margin: 20px 1.5% 0;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: top;
+  }
+
+  .sp_scroll {
+    padding-bottom: 15px;
+    max-height:500px;
+    overflow-y: auto;
+    overflow-x: scroll;
+	-webkit-overflow-scrolling: touch; 
+  }
+  .sp_scroll::-webkit-scrollbar {
+    height: 10px;
+    width:10px;
+  }
+
+  .sp_scroll::-webkit-scrollbar-track {
+    background: #ececec;
+  }
+
+  .sp_scroll::-webkit-scrollbar-thumb {
+    background: #004ea2;
+  }
+
+  .sp_width_600 {
+    width: 600px !important;
+  }
+
+  .sp_width_800 {
+    width: 800px !important;
+  }
+
+  .sp_width_980 {
+    width: 980px !important;
+  }
+
+  .sp_width_1192 {
+    width: 1192px !important;
+  }
+
+  .generic_table {
+    border: 1px solid #d0dde9;
+    width: 100%;
+  }
+  .generic_table thead tr {
+    border-bottom: 1px solid #d0dde9;
+  }
+  .generic_table thead tr th {
+    background-color: #eff5fb;
+    font-size: 12px;
+    padding: 10px 10px;
+    border-left: 1px solid #d0dde9;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .generic_table thead tr th:first-child {
+    border-left: none;
+  }
+  .generic_table thead tr td {
+    background-color: #fff;
+    font-size: 12px;
+    padding: 10px 10px;
+    border-left: 1px solid #d0dde9;
+  }
+  .generic_table tbody tr {
+    border-top: 1px solid #d0dde9;
+  }
+  .generic_table tbody tr:first-child {
+    border-top: none;
+  }
+  .generic_table tbody tr th {
+    background-color: #eff5fb;
+    font-size: 12px;
+    padding: 10px 10px;
+    border-left: 1px solid #d0dde9;
+    font-family: "FOT-セザンヌ Pro B";
+	width: 25%;
+  }
+  .generic_table tbody tr th:first-child {
+    border-left: none;
+  }
+  .generic_table tbody tr td {
+    background-color: #fff;
+    font-size: 12px;
+    padding: 10px 10px;
+    border-left: 1px solid #d0dde9;
+  }
+
+  .generic_column01 {
+    margin-top: 20px;
+  }
+  .generic_column01 li {
+    margin-top: 20px;
+  }
+
+  .generic_column01_rev {
+    margin-top: 20px;
+  }
+  .generic_column01_rev li {
+    margin-top: 20px;
+  }
+  .col02_block li a {
+    display: block;
+    background-color: #fff;
+	color: #202020;
+	text-decoration: none;
+  }
+  .col02_block li a p.btn{
+	color: #fff;
+  }
+  .col02_block li a .img {
+    width: 100%;
+  }
+  .col02_block li a .text_block {
+    padding: 10px 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .col02_block li a .text_block .sup {
+    font-size: 10px;
+    position: relative;
+    font-weight: normal;
+  }
+  .col02_block li a .text_block .sup:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    background-color: #202020;
+    width: 10px;
+    height: 1px;
+  }
+  .col02_block li a .text_block h3 {
+    font-size: 12px;
+    font-family: "FOT-セザンヌ Pro B";
+    margin-top: 15px;
+  }
+  .col02_block li a .text_block h3:first-child {
+    margin-top: 0;
+  }
+  .col02_block li a .text_block h3 span {
+    display: block;
+    font-size: 10px;
+    font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  }
+  .col02_block li a .text_block .num {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  .col02_block li a .btn {
+    padding: 5px 10px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    font-size: 12px;
+    font-family: "FOT-セザンヌ Pro M";
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_white.png);
+    background-size: 8px 15px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-color: #999;
+  }
+
+  .h_blue {
+    background-color: #004ea2;
+    color: #fff;
+    text-align: center;
+    font-family: "FOT-セザンヌ Pro B";
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .info_block {
+    background-color: #fff;
+    padding: 20px;
+  }
+  .info_block .ttl_blue {
+    font-size: 18px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+
+  .article_block {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .article_block tbody tr {
+    border-bottom: 1px solid #dadada;
+  }
+  .article_block tbody tr .date {
+    vertical-align: middle;
+    padding: 15px 10px 6px 0;
+    display: inline-block;
+  }
+  .article_block tbody tr .category {
+    vertical-align: middle;
+    padding: 15px 10px 6px 0;
+    text-align: center;
+    display: inline-block;
+  }
+  .article_block tbody tr .category a {
+    width: 130px;
+    display: block;
+    padding: 1px 10px;
+    font-size: 10px;
+    background-color: #fff;
+    font-family: "FOT-セザンヌ Pro B";
+    color: #004ea2;
+  }
+  .article_block tbody tr .category a.info {
+    color: #f48400;
+  }
+  .article_block tbody tr .category a.media {
+    color: #01b6bd;
+  }
+  .article_block tbody tr td {
+    vertical-align: middle;
+    padding: 0 0 15px;
+    display: block;
+  }
+  .article_block tbody tr td a {
+    color: #004ea2;
+    text-decoration: underline;
+  }
+  .article_block tbody tr td a:hover {
+    text-decoration: none;
+  }
+
+  .wrap_column {
+    background-color: #fff;
+    padding: 15px 10px;
+  }
+  .wrap_column .line_bottom {
+    font-size: 15px;
+    font-family: "FOT-セザンヌ Pro B";
+    position: relative;
+    margin-bottom: 25px;
+  }
+  .wrap_column .line_bottom:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: #202020;
+    width: 20px;
+    height: 1px;
+  }
+
+  /*汎用エリアここまで*/
+  .blue_link {
+    color: #004ea2;
+    text-decoration: underline;
+  }
+  .blue_link:hover {
+    text-decoration: none;
+  }
+
+  .red {
+    color: #e10000;
+
+  }
+
+  .mv_area .txt_block {
+    background-color: #004ea2;
+    color: #fff;
+    font-size: 10px;
+    padding: 12px;
+  }
+  .mv_area .txt_block p {
+    font-family: "FOT-セザンヌ Pro B";
+    position: relative;
+  }
+  .mv_area .txt_block p:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    background-color: #fff;
+    width: 10px;
+    height: 1px;
+  }
+  .mv_area .txt_block h2 {
+    font-size: 15px;
+    padding-top: 8px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .mv_area .img_block {
+    width: 100%;
+  }
+  .mv_area .img_block p img {
+    width: 100%;
+  }
+
+  .pankuzu {
+    margin: 12px auto;
+  }
+  .pankuzu ul {
+    font-size: 0;
+  }
+  .pankuzu ul li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  .pankuzu ul li:before {
+    content: '>';
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .pankuzu ul li:first-child {
+    margin-left: 0;
+  }
+  .pankuzu ul li:first-child:before {
+    content: '';
+    margin-right: 0;
+  }
+
+  .box_area .col01_block {
+    margin: 0 10px;
+    font-size: 0;
+  }
+  .box_area .col01_block li {
+    margin: 10px auto 0;
+    background-color: #fff;
+    position: relative;
+  }
+  .box_area .col01_block li a {
+    display: block;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\black_arrow_cat.png);
+    background-size: 8px 15px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  .box_area .col01_block li a .img {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    width: 100px;
+  }
+  .box_area .col01_block li a .img img {
+    width: 100%;
+  }
+  .box_area .col01_block li a .txt_block {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    padding: 15px 25px 15px 10px;
+    position: relative;
+    width: calc(100% - 100px);
+  }
+  .box_area .col01_block li a .txt_block h3 {
+    font-size: 12px;
+    font-family: "FOT-セザンヌ Pro B";
+    position: relative;
+  }
+  .box_area .col01_block li a .txt_block h3:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    background-color: #202020;
+    width: 10px;
+    height: 1px;
+  }
+  .box_area .col01_block li a .txt_block .txt {
+    margin-top: 15px;
+  }
+  .box_area .col01_block li a .txt_block .txt p {
+    font-size: 10px;
+  }
+  .box_area .col01_block li a .txt_block .btn {
+    display: none;
+  }
+
+  .linkbtn_area {
+    margin: 25px 10px 35px;
+  }
+  .linkbtn_area h2 {
+    font-size: 17px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    border-bottom: 1px solid #999;
+    padding-bottom: 6px;
+  }
+  .linkbtn_area ul {
+    font-size: 0;
+    margin-top: 15px;
+    /*text-align: center;
+    margin-left: -6px;*/
+  }
+  .linkbtn_area ul li {
+    display: inline-block;
+    width: 147px;
+    margin-top: 6px;
+    margin-left: 6px;
+    text-align: left;
+  }
+  .linkbtn_area ul li a {
+    border: 1px solid #d0dae5;
+    font-size: 10px;
+    padding: 14px 12px 14px 32px;
+    background-position: 10px;
+    display: block;
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+  .linkbtn_area ul li .book {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_book.png);
+    background-size: 15px 14px;
+  }
+  .linkbtn_area ul li .file {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_file.png);
+    background-size: 15px 15px;
+  }
+  .linkbtn_area ul li .point {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_guide.png);
+    background-size: 15px 15px;
+  }
+  .linkbtn_area ul li .mail {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_point.png);
+    background-size: 15px 15px;
+  }
+  .linkbtn_area ul li .message {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_message.png);
+    background-size: 15px 15px;
+  }
+  .linkbtn_area ul li .repair {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_repair.png);
+    background-size: 15px 15px;
+  }
+
+  .free_bnr_area {
+    margin: 25px 10px 0;
+  }
+  .free_bnr_area ul {
+    font-size: 0;
+    margin-top: -2%;
+  }
+  .free_bnr_area ul li {
+    display: inline-block;
+    font-size: 14px;
+    width: 49%;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  .free_bnr_area ul li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  .free_bnr_area ul li a img {
+    width: 100%;
+  }
+
+  .box_area {
+    margin: 0 10px 0;
+  }
+  .box_area h2 {
+    font-size: 17px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    margin-top: 30px;
+  }
+  .box_area .col02_block {
+    font-size: 0;
+    margin-top: 20px;
+  }
+  .box_area .col02_block li {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    font-size: 14px;
+
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  .box_area .col02_block li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  .box_area .col02_block li a {
+    display: block;
+    background-color: #fff;
+  }
+  .box_area .col02_block li a.new {
+    position: relative;
+    font-size: 10px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .box_area .col02_block li a.new:after {
+
+    content: '新商品';
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3px 10px;
+    background-color: #ffb93e;
+  }
+  .box_area .col02_block li a .img {
+    width: 100%;
+  }
+  .box_area .col02_block li a .img img {
+    width: 100%;
+  }
+  .box_area .col02_block li a .txt_block {
+    padding: 10px 10px 20px;
+  }
+  .box_area .col02_block li a .txt_block .sup {
+    font-size: 10px;
+    position: relative;
+    font-weight: normal;
+    font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  }
+  .box_area .col02_block li a .txt_block .sup:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    background-color: #202020;
+    width: 10px;
+    height: 1px;
+  }
+  .box_area .col02_block li a .txt_block h3 {
+    font-size: 12px;
+    font-family: "FOT-セザンヌ Pro B";
+    margin-top: 15px;
+  }
+  .box_area .col02_block li a .txt_block h3 span {
+    display: block;
+    font-size: 10px;
+    font-family: "FOT-セザンヌ Pro M", Verdana, Roboto, 'Droid Sans', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  }
+  .box_area .col02_block li a .txt_block .num {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  .box_area .col02_block li a .btn {
+    padding: 5px 10px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    font-size: 12px;
+    font-family: "FOT-セザンヌ Pro M";
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_white.png);
+    background-size: 8px 15px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-color: #999;
+  }
+  .box_area .accordion {
+    margin-top: 40px;
+  }
+  .box_area .accordion dt {
+    background-color: #004ea2;
+    margin-left: -10px;
+    margin-right: -10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    font-family: '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+	font-weight: bold;
+    padding: 15px;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_close.png);
+    background-size: 15px 8px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  .box_area .accordion dt.open {
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_open.png);
+  }
+  .box_area .accordion dd {
+    display: none;
+  }
+  .box_area .sub_txt {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .box_area .col03_block {
+    font-size: 0;
+    margin: 15px 0 0;
+  }
+  .box_area .col03_block li {
+    width: 100%;
+    font-size: 14px;
+    display: inline-block;
+    background-color: #fff;
+    margin-top: 15px;
+
+
+
+  }
+  .box_area .col03_block li:first-child {
+    margin-top: 0;
+  }
+  .box_area .col03_block li a {
+    display: block;
+  }
+  .box_area .col03_block li a .img {
+    width: 100%;
+  }
+  .box_area .col03_block li a .img img {
+    width: 100%;
+  }
+  .box_area .col03_block li a .txt_block {
+    padding: 15px 12px;
+  }
+  .box_area .col03_block li a .txt_block h3 {
+    font-size: 12px;
+    font-family: "FOT-セザンヌ Pro B";
+    position: relative;
+  }
+  .box_area .col03_block li a .txt_block h3:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    background-color: #202020;
+    width: 10px;
+    height: 1px;
+  }
+  .box_area .col03_block li a .txt_block p {
+    margin-top: 15px;
+    font-size: 10px;
+  }
+  .box_area .col03_block li a .btn {
+    padding: 5px 10px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    font-size: 12px;
+    font-family: "FOT-セザンヌ Pro M";
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\arrow_white.png);
+    background-size: 8px 15px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-color: #999;
+  }
+
+  .big_bnr_area {
+    background-color: #fff;
+    margin-top: 40px;
+  }
+  .big_bnr_area ul {
+    padding: 10px;
+    text-align: center;
+    font-size: 0;
+  }
+  .big_bnr_area ul li {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .big_bnr_area ul li:first-child {
+    margin-top: 0;
+  }
+  .big_bnr_area ul li a img {
+    width: 100%;
+  }
+
+  .fin_bnr_area {
+    margin: 25px 10px 0;
+  }
+  .fin_bnr_area ul {
+    font-size: 0;
+    margin-top: 30px;
+  }
+  .fin_bnr_area ul li {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .fin_bnr_area ul li:first-child {
+    margin-left: 0;
+  }
+  .fin_bnr_area ul li a img {
+    width: 100%;
+  }
+
+  .detail_mv_area {
+    width: 100%;
+  }
+  .detail_mv_area .img_block p img {
+    width: 100%;
+  }
+
+  .product_place_area {
+    font-size: 0;
+    margin: 25px 10px 30px;
+  }
+  .product_place_area .detail_block .sub_ttl {
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .product_place_area .detail_block .logo {
+    width: 220px;
+    margin-top: 10px;
+  }
+  .product_place_area .detail_block .logo img {
+    width: 100%;
+  }
+  .product_place_area .detail_block h2 {
+    font-size: 10px;
+    margin-top: 7px;
+    font-family: "FOT-セザンヌ Pro B";
+    line-height: 1.4;
+  }
+  .product_place_area .detail_block .txt_block {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .product_place_area .detail_block .txt_block p {
+    margin-top: 10px;
+  }
+  .product_place_area .detail_block .txt_block p:first-child {
+    margin-top: 0;
+  }
+  .product_place_area .img_block {
+    display: none;
+  }
+  .product_place_area .img_block p img {
+    width: 100%;
+  }
+  .product_place_area .link_btn01{
+	width: 170px;
+	text-align: left;
+  }
+  .product_place_area .link_btn01 a{
+	padding: 10px 15px;
+	font-size: 13px;
+  }
+
+  .detail_nav_area ul {
+    font-size: 0;
+    text-align: center;
+  }
+  .detail_nav_area ul li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%;
+    font-size: 10px;
+    text-align: center;
+    border-top: 1px solid #d0dae5;
+    border-bottom: 1px solid #d0dae5;
+    border-left: 1px solid #d0dae5;
+    height: 42px;
+  }
+  .detail_nav_area ul li:first-child {
+    border-left: none;
+  }
+  /*
+  .detail_nav_area ul li:nth-child(3) a {
+    padding: 7px 9px;
+  }
+  .detail_nav_area ul li a {
+    width: 100%;
+    font-size: 10px;
+    padding: 13px 9px;
+    background-color: #fff;
+    display: block;
+    line-height: 1.3;
+    height: 40px;
+  }
+  */
+  .detail_nav_area ul li a {
+    width: 100%;
+    font-size: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
+    height: 40px;
+  }
+  .detail_nav_area ul li a.active {
+    background-color: #004ea2;
+    color: #fff;
+  }
+
+  .detail_main_area {
+    background-color: #fff;
+    padding-bottom: 40px;
+  }
+  .detail_main_area .lower {
+    margin: 0 10px;
+    padding-top: 30px;
+  }
+  .detail_main_area .lower:first-child {
+    padding-top: 20px;
+  }
+  .detail_main_area .lower h2 {
+    font-size: 17px;
+    color: #004ea2;
+    font-family: "FOT-セザンヌ Pro B";
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    margin-top: 30px;
+  }
+  .detail_main_area .lower h2:first-child {
+    margin-top: 0;
+  }
+  .detail_main_area .lower .block {
+    margin-top: 40px;
+  }
+  .detail_main_area .lower .block:first-of-type {
+    margin-top: 25px;
+  }
+  .detail_main_area .lower .block .ttl {
+    font-size: 0;
+  }
+  .detail_main_area .lower .block .ttl strong {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    padding: 3px 15px;
+    background-color: #ffb93e;
+    font-family: "FOT-セザンヌ Pro B";
+    height: 30px;
+  }
+  .detail_main_area .lower .block .ttl span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 9px;
+    color: #f61b1b;
+    padding: 6px 8px;
+    color: #f61b1b;
+    border: 1px solid #f61b1b;
+    height: 30px;
+  }
+  .detail_main_area .lower .block h3 {
+    font-size: 17px;
+    font-family: "FOT-セザンヌ Pro B";
+    margin-top: 12px;
+    line-height: 1.3;
+  }
+  .detail_main_area .lower .block h3.h_ttl {
+    border-left: 5px solid #004ea2;
+    padding: 0 0 0 8px;
+    vertical-align: middle;
+  }
+  .detail_main_area .lower .block h3.h_ttl span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 9px;
+    padding: 8px 8px;
+    color: #f61b1b;
+    border: 1px solid #f61b1b;
+    margin-bottom: 4px;
+  }
+  .detail_main_area .lower .block h3.h_ttl strong {
+    display: block;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .detail_main_area .lower .block h3.h_ttl sup {
+    font-size: 9px;
+
+    vertical-align: top;
+    position: relative;
+  }
+  .detail_main_area .lower .block .col2_block .right_txt {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  .detail_main_area .lower .block .col2_block .right_txt p {
+    margin-top: 15px;
+  }
+  .detail_main_area .lower .block .col2_block .right_txt p:first-child {
+    margin-top: 0;
+  }
+  .detail_main_area .lower .block .col2_block .left_img {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .detail_main_area .lower .block .col2_block .left_img p img {
+    width: 100%;
+  }
+  .detail_main_area .lower .block .txt_block {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  .detail_main_area .lower .block .txt_block p {
+    margin-top: 15px;
+  }
+  .detail_main_area .lower .block .txt_block p:first-child {
+    margin-top: 0;
+  }
+  .detail_main_area .lower .block .txt_block p sup {
+    font-size: 5px;
+    vertical-align: top;
+    position: relative;
+  }
+  .detail_main_area .lower .block .img {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .detail_main_area .lower .block .img img {
+    width: 100%;
+  }
+  .detail_main_area .lower .block .caution {
+    font-size: 10px;
+    color: #999;
+    margin-top: 15px;
+  }
+  .detail_main_area .lower .block .btn {
+    width: 100%;
+    margin: 15px 0 0;
+    text-align: center;
+  }
+  .detail_main_area .lower .block .btn a {
+    background-color: #999;
+    display: block;
+    padding: 12px 15px;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    background-image: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\white_arrow_right.png);
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+    background-position: right 7px center;
+	text-decoration: none;
+  }
+  .detail_main_area .lower .block .item {
+    margin-top: 10px;
+    font-size: 0;
+    margin-left: -15px;
+  }
+  .detail_main_area .lower .block .item li {
+    margin-left: 15px;
+    margin-top: 10px;
+    display: inline-block;
+    color: #e74c3c;
+    font-size: 12px;
+    background-color: #fff3f3;
+    padding: 3px 15px;
+    border-radius: 10px;
+  }
+  .detail_main_area .lower .block table {
+    width: 100%;
+    margin-top: -10px;
+  }
+  .detail_main_area .lower .block table tbody tr {
+    border-bottom: 1px solid #d0dde9;
+    font-size: 16px;
+  }
+  .detail_main_area .lower .block table tbody tr th {
+    display: block;
+    font-size: 12px;
+    padding-top: 8px;
+	font-family: "FOT-セザンヌ Pro B";
+  }
+  .detail_main_area .lower .block table tbody tr td {
+    display: block;
+    padding: 0 0 8px;
+    font-size: 10px;
+  }
+  .detail_main_area .lower .block table tbody tr td:first-child {
+    display: block;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
+
+  .model_area {
+    margin: 20px 10px 0;
+  }
+  .model_area h2 {
+    color: #e74c3c;
+    font-size: 14px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .model_area ul {
+    margin-top: 15px;
+  }
+  .model_area ul li {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  .bt_bnr_area {
+    background-color: #fff;
+  }
+  .bt_bnr_area .lower {
+    margin: 0 10px;
+    padding: 30px 0 30px;
+  }
+  .bt_bnr_area .lower ul {
+    font-size: 0;
+    margin-top: -2%;
+  }
+  .bt_bnr_area .lower ul li {
+    margin-top: 2%;
+    width: 49%;
+    margin-left: 2%;
+    display: inline-block;
+    font-size: 12px;
+  }
+  .bt_bnr_area .lower ul li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  .bt_bnr_area .lower ul li a img {
+    width: 100%;
+  }
+  .bt_bnr_area .lower .hit_block {
+    margin-top: 15px;
+  }
+  .bt_bnr_area .lower .hit_block p {
+    margin-top: 6px;
+  }
+  .bt_bnr_area .lower .hit_block p:first-child {
+    margin-top: 0;
+  }
+  .bt_bnr_area .lower .hit_block p a {
+    background: url(C:\Users\Pushpendra\Desktop\FUJIYORKI\WEB\INDEX\index_files\icon_hit.png) no-repeat;
+    background-size: 15px 15px;
+    background-position: left;
+    padding-left: 20px;
+    display: block;
+  }
+
+  .product_simple_area {
+    margin: 0 10px;
+    font-size: 0;
+	padding-bottom: 30px;
+  }
+  .product_simple_area .txt_block {
+    font-size: 15px;
+  }
+  .product_simple_area .txt_block .logo {
+    width: 198px;
+  }
+  .product_simple_area .txt_block .logo img {
+    width: 100%;
+  }
+  .product_simple_area .txt_block .ttl {
+    margin-top: 6px;
+    font-size: 15px;
+    font-family: "FOT-セザンヌ Pro B";
+  }
+  .product_simple_area .img_block {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 200px;
+  }
+  .product_simple_area .img_block p img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=frame.css.map */

@@ -1,0 +1,441 @@
+//名前空間
+var FUJI = FUJI || {};
+
+
+(function ($, window, GNS, undefined) {
+
+    "use strict";
+
+    var $window = $(window);
+
+    var CONFIG = {
+        RESPONSIVE: true,
+        BREAKPOINTS: {
+            XS: {
+                MIN: 0,
+                MAX: 767
+            },
+            LG: {
+                MIN: 768
+            }
+        }
+    };
+
+
+
+    //ウインドウサイズ
+    GNS.ww = 0;
+    GNS.wh = 0;
+    //スクロール量
+    GNS.sx = 0;
+    GNS.sy = 0;
+    //デバイスの種類
+    GNS.device = undefined;
+    //タッチデバイスかどうか
+    GNS.is_touch = undefined;
+    //どのデバイスの表示状態か
+    GNS.viewMode = undefined;
+    //どのブラウザーで表示しているか
+    GNS.browser = undefined;
+    //タッチでバイス時のディスプレイの向き
+    GNS.direction = undefined;
+
+
+    /***************************************
+     *
+     *   JudgeBrowser
+     *   ユーザーエージェントをもとにブラウザを判定
+     *
+     ****************************************/
+
+    var JudgeBrowser = function () {
+        this.ua = window.navigator.userAgent.toLowerCase();
+        this.ver = window.navigator.appVersion.toLowerCase();
+    };
+
+    JudgeBrowser.prototype.initialize = function () {
+        var _this = this;
+        _this.judge();
+    };
+
+    JudgeBrowser.prototype.judge = function () {
+        var _this = this;
+        GNS.browser = (function () {
+            var name = 'unknown';
+            if (_this.ua.indexOf("msie") != -1 && _this.ua.indexOf('opera') == -1) {
+                if (_this.ver.indexOf("msie 6.") != -1) {
+                    name = 'ie6';
+                } else if (_this.ver.indexOf("msie 7.") != -1) {
+                    name = 'ie7';
+                } else if (_this.ver.indexOf("msie 8.") != -1) {
+                    name = 'ie8';
+                } else if (_this.ver.indexOf("msie 9.") != -1) {
+                    name = 'ie9';
+                } else if (_this.ver.indexOf("msie 10.") != -1) {
+                    name = 'ie10';
+                }
+            } else if (_this.ua.indexOf('trident/7') != -1) {
+                name = 'ie11';
+            } else if (_this.ua.indexOf('edge') > -1) {
+                name = 'eade';
+            } else if (_this.ua.indexOf('chrome') != -1) {
+                name = 'chrome';
+            } else if (_this.ua.indexOf('safari') != -1) {
+                name = 'safari';
+            } else if (_this.ua.indexOf('opera') != -1) {
+                name = 'opera';
+            } else if (_this.ua.indexOf('firefox') != -1) {
+                name = 'firefox';
+            }
+            return name;
+        })();
+    };
+
+    //初期化
+    var judgeBrowser = new JudgeBrowser();
+    judgeBrowser.initialize();
+
+
+
+
+    /***************************************
+     *
+     *   JudgeDevice
+     *   ユーザーエージェントをもとにデバイスを判定
+     *
+     ****************************************/
+
+    var JudgeDevice = function () {
+        this.ua = window.navigator.userAgent.toLowerCase();
+    };
+
+    JudgeDevice.prototype.initialize = function () {
+        var _this = this;
+        var _is_sp, _is_tab, _is_pc;
+        GNS.device = (function (u) {
+            if ((u.indexOf("windows") != -1 && u.indexOf("phone") != -1) || u.indexOf("iphone") != -1 || u.indexOf("ipod") != -1 || (u.indexOf("android") != -1 && u.indexOf("mobile") != -1) || (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1) || u.indexOf("blackberry") != -1) {
+                _is_sp = true;
+                return "sp";
+            } else if ((u.indexOf("windows") != -1 && u.indexOf("touch") != -1) || u.indexOf("ipad") != -1 || (u.indexOf("android") != -1 && u.indexOf("mobile") === -1) || (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1) || u.indexOf("kindle") != -1 || u.indexOf("silk") != -1 || u.indexOf("playbook") != -1) {
+                _is_tab = true;
+                return "tab";
+            } else {
+                _is_pc = true;
+                return "pc";
+            }
+        })(_this.ua);
+        GNS.is_touch = (function () {
+            if (_is_sp || _is_tab) {
+                return true;
+            } else {
+                return false;
+            }
+        })();
+    };
+
+
+    //初期化
+    var judgeDevice = new JudgeDevice();
+    judgeDevice.initialize();
+
+
+
+    /***************************************
+     *
+     *   SetBaseEventListener
+     *   基本となるイベントをハンドルする
+     *
+     ****************************************/
+
+    var SetBaseEventListener = function () {
+        this.resizeTimer = false;
+    };
+
+    SetBaseEventListener.prototype.initialize = function () {
+        var _this = this;
+
+        //onReadyHandler
+        $(function () {
+            $.publish("onReadyHandler");
+        });
+        //onLoadHandler
+        $window.on("load", function () {
+            $.publish("onLoadHandler");
+        });
+        //onResizeHandler
+        if (GNS.is_touch) {
+            $window.on("orientationchange", function () {
+                $.publish("onResizeHandler");
+            });
+        } else {
+            $window.on("resize", function () {
+                if (_this.resizeTimer !== false) {
+                    clearTimeout(_this.resizeTimer);
+                }
+                _this.resizeTimer = setTimeout(function () {
+                    $.publish("onResizeHandler");
+                }, 200);
+            });
+        }
+        //onScrollHandler
+        $window.on('scroll', function () {
+            $.publish("onScrollHandler");
+        });
+    };
+
+
+    //初期化
+    var setBaseEventListener = new SetBaseEventListener();
+    setBaseEventListener.initialize();
+
+
+
+    /***************************************
+     *
+     *   SetClassByUA
+     *   ユーザーエージェントからの判定をもとに、<body>タグにクラスを追加
+     *
+     ****************************************/
+
+    var SetClassByUA = function () {
+        this.$body = $("body");
+    };
+
+    SetClassByUA.prototype.initialize = function () {
+        var _this = this;
+        _this.setClass();
+    };
+    SetClassByUA.prototype.setClass = function () {
+        var _this = this;
+        switch (GNS.device) {
+            case "sp":
+                _this.$body.addClass("ua-sp");
+                break;
+            case "tab":
+                _this.$body.addClass("ua-tab");
+                break;
+            case "pc":
+                _this.$body.addClass("ua-pc");
+                break;
+        }
+    };
+
+
+    //初期化
+    $.subscribe("onReadyHandler", function () {
+        var setClassByUA = new SetClassByUA();
+        setClassByUA.initialize();
+    });
+
+
+    /***************************************
+     *
+     *   GetDeviceDirection
+     *   ウインドウサイズを取得
+     *
+     ****************************************/
+
+    var GetDeviceDirection = function () {};
+
+    GetDeviceDirection.prototype.initialize = function () {
+        var _this = this;
+        _this.get();
+        $.subscribe("onResizeHandler", function () {
+            _this.get();
+        });
+    };
+
+
+    GetDeviceDirection.prototype.get = function () {
+        var _this = this;
+        if (Math.abs(window.orientation) === 90) {
+            GNS.direction = "landscape";
+        } else {
+            GNS.direction = "portrait";
+        }
+    };
+
+    //タッチでバイス時のみ初期化
+    if (GNS.is_touch) {
+        var getDeviceDirection = new GetDeviceDirection();
+        getDeviceDirection.initialize();
+    }
+
+
+
+
+
+
+
+
+
+    /***************************************
+     *
+     *   getWindowSize
+     *   ウインドウサイズを取得
+     *
+     ****************************************/
+
+    var GetWindowSize = function () {};
+
+    GetWindowSize.prototype.initialize = function () {
+        var _this = this;
+        _this.get();
+        $.subscribe("onResizeHandler", function () {
+            _this.get();
+        });
+    };
+
+    GetWindowSize.prototype.get = function () {
+        var _this = this;
+        if (GNS.is_touch) {
+            if (GNS.direction === "landscape") {
+                GNS.ww = window.screen.height;
+                GNS.wh = window.screen.width;
+            } else {
+                GNS.ww = window.screen.width;
+                GNS.wh = window.screen.height;
+            }
+        } else {
+            GNS.ww = $window.innerWidth();
+            GNS.wh = $window.innerHeight();
+        }
+    };
+
+
+    //初期化
+    var getWindowSize = new GetWindowSize();
+    getWindowSize.initialize();
+
+
+
+    /***************************************
+     *
+     *   GetScrollAmount
+     *   スクロール量を取得
+     *
+     ****************************************/
+
+    var GetScrollAmount = function () {};
+    GetScrollAmount.prototype.initialize = function () {
+        var _this = this;
+        $.subscribe("onScrollHandler", function () {
+            GNS.scrollX = $window.scrollLeft();
+            GNS.scrollY = $window.scrollTop();
+
+        });
+    };
+
+    //初期化
+    var getScrollAmount = new GetScrollAmount();
+    getScrollAmount.initialize();
+
+
+
+    /***************************************
+     *
+     *   JudegeViewMode
+     *   ウインドウサイズから表示状態を判定
+     *
+     ****************************************/
+
+
+    var JudegeViewMode = function () {};
+
+    JudegeViewMode.prototype.initialize = function () {
+        var _this = this;
+        _this.judge();
+        $.subscribe("onResizeHandler", function () {
+            _this.judge();
+        });
+    };
+
+    JudegeViewMode.prototype.judge = function () {
+        var _this = this;
+        if (CONFIG.BREAKPOINTS.XS !== undefined) {
+            if (GNS.ww >= CONFIG.BREAKPOINTS.XS.MIN && GNS.ww <= CONFIG.BREAKPOINTS.XS.MAX) {
+                GNS.viewMode = "xs";
+            }
+        }
+        if (CONFIG.BREAKPOINTS.SM !== undefined) {
+            if (GNS.ww >= CONFIG.BREAKPOINTS.SM.MIN && GNS.ww <= CONFIG.BREAKPOINTS.SM.MAX) {
+                GNS.viewMode = "sm";
+            }
+        }
+        if (CONFIG.BREAKPOINTS.MD !== undefined) {
+            if (GNS.ww >= CONFIG.BREAKPOINTS.MD.MIN && GNS.ww <= CONFIG.BREAKPOINTS.MD.MAX) {
+                GNS.viewMode = "md";
+            }
+        }
+        if (CONFIG.BREAKPOINTS.LG !== undefined) {
+            if (GNS.ww >= CONFIG.BREAKPOINTS.LG.MIN) {
+                GNS.viewMode = "lg";
+            }
+        }
+
+    };
+
+    //レスポンシブサイトのときのみ初期化
+    if (CONFIG.RESPONSIVE) {
+        var judegeViewMode = new JudegeViewMode();
+        judegeViewMode.initialize();
+    }
+
+
+
+    /***************************************
+     *
+     *   SetClassByViewMode
+     *   ウインドウサイズをもとに、<body>タグにクラスを追加
+     *
+     ****************************************/
+
+    var SetClassByViewMode = function () {
+        this.$body = $("body");
+    };
+    SetClassByViewMode.prototype.initialize = function () {
+        var _this = this;
+        _this.setClass();
+        $.subscribe("onResizeHandler", function () {
+            _this.setClass();
+        });
+    };
+    SetClassByViewMode.prototype.setClass = function () {
+        var _this = this;
+        //一旦bodyについている全ての.view-*クラスを削除
+        _this.$body.removeClass(function (index, className) {
+            return (className.match(/\bview\S+/g) || []).join(' ');
+        });
+        switch (GNS.viewMode) {
+            case "xs":
+                _this.$body.addClass("view-xs");
+                break;
+            case "sm":
+                _this.$body.addClass("view-sm");
+                break;
+            case "md":
+                _this.$body.addClass("view-md");
+                break;
+            case "lg":
+                _this.$body.addClass("view-lg");
+                break;
+        }
+    };
+
+    //レスポンシブサイトのときのみ初期化
+    if (CONFIG.RESPONSIVE) {
+        $.subscribe("onReadyHandler", function () {
+            var setClassByViewMode = new SetClassByViewMode();
+            setClassByViewMode.initialize();
+        });
+    }
+
+
+
+    //console.log(FUJI);
+
+
+
+
+
+})(jQuery, window, FUJI);
